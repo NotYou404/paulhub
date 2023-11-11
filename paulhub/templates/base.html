@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="static/dark-theme.css" rel="stylesheet" id="dark-theme-link">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <title>PaulHub - {% block title %}{{ title }}{% endblock title %}</title>
+</head>
+
+<body>
+  <div style="width: 960;">
+    <header>
+      {% include "_navigation.html" %}
+    </header>
+    {% block content %}
+      <h1>Very good site this is, very recommendable.</h1>
+    {% endblock content %}
+  </div>
+</body>
+</html>
