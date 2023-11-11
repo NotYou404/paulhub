@@ -8,10 +8,17 @@
 </head>
 
 <body>
-  <div style="width: 960;">
+  <style>
+    div.content {
+      width: 1000px;
+      margin: auto;
+    }
+  </style>
+  <div class="content">
     <header>
       {% include "_navigation.html" %}
     </header>
+    <br><br><br><br><br>
     {% block content %}
       <h1>Very good site this is, very recommendable.</h1>
     {% endblock content %}

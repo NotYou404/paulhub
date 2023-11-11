@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div> 
+  <style>
+    .flex-row-justified {
+      display: flex;
+      align-items: normal; /* Align Items Vertically */
+      justify-content: space-evenly; /* Align Items Horizontally */
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      column-gap: 50px;
+    }
+    #limit-300 {
+        max-width: 300px;
+    }
+    h2 {
+      text-align: left;
+      text-size-adjust: auto;
+      font-size: calc(24px + .5vw);
+    }
+  </style>
+  <h2>Trending 📈</h2>
+  <div class="container flex-row-justified">
+    {% for image, text in trending %}
+    <div style="font-size: 30px", id="limit-300">
+      <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+      <a href="{{ url_for(text.func) }}">{{ text.text }}</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}
