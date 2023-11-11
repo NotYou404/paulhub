@@ -1,0 +1,100 @@
+{
+    "11": {
+        "trending": [
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "func": "about",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "about",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "December preparations"
+                },
+                {
+                    "func": "about",
+                    "text": "December preparations"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "about",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "about",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "October's true meaning"
+                },
+                {
+                    "func": "about",
+                    "text": "October's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "menu.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    }
+}
