@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template
 from pathlib import Path
 import json
 from datetime import datetime
@@ -42,3 +42,8 @@ def about():
         "header_text": "About"
     }
     return render_template("base.html", **context)
+
+
+@app.route("/redirects/anti_november_petition")
+def anti_november_petition():
+    return redirect("https://chng.it/DTnJPHWht6")
