@@ -29,7 +29,7 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.trending %}
     <div style="font-size: 30px", id="limit-300">
-      <a href="{{ url_for(text.func) }}">
+      <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
         <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
@@ -43,7 +43,7 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.latest %}
     <div style="font-size: 30px", id="limit-300">
-      <a href="{{ url_for(text.func) }}">
+      <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
         <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
@@ -57,7 +57,7 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.recommendations %}
     <div style="font-size: 30px", id="limit-300">
-      <a href="{{ url_for(text.func) }}">
+      <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
         <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>

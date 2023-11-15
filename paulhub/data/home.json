@@ -7,13 +7,13 @@
                     "alt": "Petition against the November"
                 },
                 {
-                    "func": "anti_november_petition",
+                    "open_in_new_tab": "https://www.change.org/antinovember",
                     "text": "Petition against the November"
                 }
             ],
             [
                 {
-                    "name": "menu.png",
+                    "name": "prof.jpg",
                     "alt": "Personal stuff"
                 },
                 {
@@ -35,7 +35,7 @@
         "latest": [
             [
                 {
-                    "name": "menu.png",
+                    "name": "no_no_nuts.png",
                     "alt": "Men friendly month challenges"
                 },
                 {

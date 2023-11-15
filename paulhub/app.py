@@ -39,9 +39,36 @@ def home():
 def about():
     context = {
         "title": "About",
-        "header_text": "About"
+        "header_text": "About",
     }
     return render_template("about.html", **context)
+
+
+@app.route("/tos")
+def tos():
+    context = {
+        "title": "Terms of Service",
+        "header_text": "Terms of Service",
+    }
+    return render_template("tos.html", **context)
+
+
+@app.route("/pp")
+def pp():
+    context = {
+        "title": "Privacy Policy",
+        "header_text": "Privacy Policy",
+    }
+    return render_template("pp.html", **context)
+
+
+@app.route("/contact")
+def contact():
+    context = {
+        "title": "Contact",
+        "header_text": "Contact us",
+    }
+    return render_template("contact.html", **context)
 
 
 @app.route("/redirects/anti_november_petition")
