@@ -8,3 +8,6 @@ body a {
 header, footer {
   background-color: rgb(20, 20, 20);
 }
+table {
+  border: 1px solid rgb(16, 16, 16);
+}

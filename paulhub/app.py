@@ -41,7 +41,7 @@ def about():
         "title": "About",
         "header_text": "About",
     }
-    return render_template("about.html", **context)
+    return render_template("legal/about.html", **context)
 
 
 @app.route("/tos")
@@ -50,7 +50,7 @@ def tos():
         "title": "Terms of Service",
         "header_text": "Terms of Service",
     }
-    return render_template("tos.html", **context)
+    return render_template("legal/tos.html", **context)
 
 
 @app.route("/pp")
@@ -59,7 +59,7 @@ def pp():
         "title": "Privacy Policy",
         "header_text": "Privacy Policy",
     }
-    return render_template("pp.html", **context)
+    return render_template("legal/pp.html", **context)
 
 
 @app.route("/contact")
@@ -68,7 +68,16 @@ def contact():
         "title": "Contact",
         "header_text": "Contact us",
     }
-    return render_template("contact.html", **context)
+    return render_template("legal/contact.html", **context)
+
+
+@app.route("/pages/personal_stuff")
+def personal_stuff():
+    context = {
+        "title": "Personal stuff",
+        "header_text": "Personal stuff",
+    }
+    return render_template("pages/personal_stuff.html", **context)
 
 
 @app.route("/redirects/anti_november_petition")

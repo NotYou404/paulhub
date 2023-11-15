@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 160%;
+}
+th, td {
+  text-align: left;
+  padding: 16px;
+  font-size: 16px;
+}
+tr:nth-child(even) {
+  background-color: rgb(50, 50, 50);
+}
+div.personal-stuff-table-img-div {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.float-left-child {
+  float: left;
+}
+.float-right-child {
+  float: right;
+}
+.inline-block-child {
+  display: inline-block;
+}
+</style>
+<br><br>
+<div class="personal-stuff-table-img-div parent">
+<div class='child inline-block-child'>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Jürgen</th>
+    </tr>
+    <tr>
+      <td>Surname</td>
+      <td>Hans</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>Jackson</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>Platz der Republik 1<br>10557 Berlin</td>
+    </tr>
+    <tr>
+      <td>Favorite color</td>
+      <td>Ultraviolet</td>
+    </tr>
+    <tr>
+      <td>Hair color</td>
+      <td>Ultraviolet</td>
+    </tr>
+    <tr>
+      <td>Eye color</td>
+      <td>Ultraviolet</td>
+    </tr>
+    <tr>
+      <td>Skin color</td>
+      <td>Infrared</td>
+    </tr>
+    <tr>
+      <td>Dick size</td>
+      <td><sup>1</sup>&frasl;<sub>4</sub>in</td>
+    </tr>
+    <tr>
+      <td>Favorite drink</td>
+      <td>Soda</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>1,35"</td>
+    </tr>
+    <tr>
+      <td>Feet size</td>
+      <td>12cm</td>
+    </tr>
+    <tr>
+      <td>Religion</td>
+      <td>Schizophrenia</td>
+    </tr>
+    <tr>
+      <td>Voices?</td>
+      <td>&#10003;</td>
+    </tr>
+    <tr>
+      <td>Cake?</td>
+      <td>Lie.</td>
+    </tr>
+  </table>
+</div>
+<div class='child inline-block-child float-right-child'>
+  <br>
+  <img src="/static/gunther.png" alt="Hans Günter">
+</div>
+</div>
+
+{% endblock content %}
