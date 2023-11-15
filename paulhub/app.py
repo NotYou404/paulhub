@@ -41,9 +41,9 @@ def about():
         "title": "About",
         "header_text": "About"
     }
-    return render_template("base.html", **context)
+    return render_template("about.html", **context)
 
 
 @app.route("/redirects/anti_november_petition")
 def anti_november_petition():
-    return redirect("https://chng.it/DTnJPHWht6")
+    return redirect("https://www.change.org/antinovember")

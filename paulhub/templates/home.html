@@ -29,8 +29,10 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.trending %}
     <div style="font-size: 30px", id="limit-300">
-      <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
-      <a href="{{ url_for(text.func) }}">{{ text.text }}</a>
+      <a href="{{ url_for(text.func) }}">
+        <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+        {{ text.text }}
+      </a>
     </div>
     {% endfor %}
   </div>
@@ -41,8 +43,10 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.latest %}
     <div style="font-size: 30px", id="limit-300">
-      <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
-      <a href="{{ url_for(text.func) }}">{{ text.text }}</a>
+      <a href="{{ url_for(text.func) }}">
+        <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+        {{ text.text }}
+      </a>
     </div>
     {% endfor %}
   </div>
@@ -53,8 +57,10 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.recommendations %}
     <div style="font-size: 30px", id="limit-300">
-      <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
-      <a href="{{ url_for(text.func) }}">{{ text.text }}</a>
+      <a href="{{ url_for(text.func) }}">
+        <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+        {{ text.text }}
+      </a>
     </div>
     {% endfor %}
   </div>
