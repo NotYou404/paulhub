@@ -5,6 +5,7 @@
   <link href="/static/dark-theme.css" rel="stylesheet" id="dark-theme-link">
   <link href="/static/style.css" rel="stylesheet" id="style-link">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="/static/create_premium_bar.js"></script>
   <title>PaulHub - {% block title %}{{ title }}{% endblock title %}</title>
   <style>
     html * {
@@ -24,6 +25,10 @@
     <header>
       {% include "_navigation.html" %}
     </header>
+    <script>
+      setTimeout(createPremiumBar, 1000);
+    </script>
+    <div id="premiumBar"></div>
     <br>
     {% block content %}
       <h1>To my defense, I don't have unlimited time. Well, I do, but I'm lazy. WORK IN PROGRESSSS!</h1>
