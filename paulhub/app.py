@@ -80,6 +80,15 @@ def personal_stuff():
     return render_template("pages/personal_stuff.html", **context)
 
 
+@app.route("/premium")
+def premium():
+    context = {
+        "title": "Buy PaulHub Premium",
+        "header_text": "Buy Premium",
+    }
+    return render_template("premium/premium.html", **context)
+
+
 @app.route("/redirects/anti_november_petition")
 def anti_november_petition():
     return redirect("https://www.change.org/antinovember")

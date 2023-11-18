@@ -13,8 +13,8 @@
       padding-right: 20px;
       column-gap: 50px;
     }
-    #limit-300 {
-        max-width: 300px;
+    #limit-284 {
+        max-width: 284px;
     }
     h2 {
       text-align: left;
@@ -28,9 +28,9 @@
   <h2>Trending 📈</h2>
   <div class="container flex-row-justified">
     {% for image, text in month_data.trending %}
-    <div style="font-size: 26px", id="limit-300">
+    <div style="font-size: 26px", id="limit-284">
       <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
-        <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+        <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
     </div>
@@ -42,9 +42,9 @@
   <h2>Latest ✨</h2>
   <div class="container flex-row-justified">
     {% for image, text in month_data.latest %}
-    <div style="font-size: 26px", id="limit-300">
+    <div style="font-size: 26px", id="limit-284">
       <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
-        <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+        <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
     </div>
@@ -56,9 +56,9 @@
   <h2>Recommendations 🎖️</h2>
   <div class="container flex-row-justified">
     {% for image, text in month_data.recommendations %}
-    <div style="font-size: 26px", id="limit-300">
+    <div style="font-size: 26px", id="limit-284">
       <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
-        <img src="/static/{{ image.name }}" width="300" height="300" class="d-inline-block align-top" alt="{{ image.alt }}">
+        <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
     </div>
