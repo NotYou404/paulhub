@@ -16,7 +16,7 @@
     #limit-284 {
         max-width: 284px;
     }
-    h2 {
+    h2.home-heading {
       text-align: left;
       text-size-adjust: auto;
       font-size: calc(24px + .5vw);
@@ -25,11 +25,11 @@
 
   <br><br>
 
-  <h2>Trending 📈</h2>
+  <h2 class="home-heading">Trending 📈</h2>
   <div class="container flex-row-justified">
     {% for image, text in month_data.trending %}
     <div style="font-size: 26px", id="limit-284">
-      <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
+      <a class="theme" href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
         <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
@@ -39,11 +39,11 @@
 
   <br><br><br><br>
 
-  <h2>Latest ✨</h2>
+  <h2 class="home-heading">Latest ✨</h2>
   <div class="container flex-row-justified">
     {% for image, text in month_data.latest %}
     <div style="font-size: 26px", id="limit-284">
-      <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
+      <a class="theme" href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
         <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
@@ -53,11 +53,11 @@
 
   <br><br><br><br>
 
-  <h2>Recommendations 🎖️</h2>
+  <h2 class="home-heading">Recommendations 🎖️</h2>
   <div class="container flex-row-justified">
     {% for image, text in month_data.recommendations %}
     <div style="font-size: 26px", id="limit-284">
-      <a href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
+      <a class="theme" href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
         <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>

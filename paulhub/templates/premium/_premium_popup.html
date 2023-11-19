@@ -1,0 +1,141 @@
+<style>
+  .w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+  .w3-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+  .w3-display-topright{position:absolute;right:0;top:0}
+  div.premiumDiv {
+    margin: 0;
+    border-radius: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .div-border-wrap {
+    max-width: 850px;
+    border-radius: 32px;
+    margin: auto;
+    padding: 4px;
+    position: relative;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%
+    );
+  }
+  h2.premium-page-header {
+    font-size: 42px;
+    background: linear-gradient(270deg, rgba(0,134,255,1) 0%, rgba(192,0,255,1) 50%, rgba(255,209,0,1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  p.premium-checkmarks {
+    font-size: 22px;
+  }
+  h2.premium-page-price {
+    font-size: 52px;
+    text-align: center;
+  }
+  span.cross {
+    position: relative;
+    display: inline-block;
+  }
+  span.cross:after,
+  span.cross:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: red;
+  }
+  span.cross:before {
+    transform: rotate(25deg);
+  }
+  span.cross:after {
+    transform: rotate(-25deg);
+  }
+  a.buy-btn {
+    background-color: rgb(0, 94, 201);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    border-radius: 15px;
+    font-size: 36px;
+  }
+  div.cross-wrapper {
+    padding-top: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+  }
+  .premium-close-button {
+    cursor: pointer;
+  }
+</style>
+
+<div id="premiumPremiumPopup" class="w3-modal">
+<div class="div-border-wrap w3-animate-zoom">
+  <div class="premiumDiv">
+    <div class="w3-display-topright cross-wrapper">
+    <span id="closePremiumSpan" onclick="hidePremiumPopupIfAllowed()" class="premium-close-button not-selectable"></span>
+    <script>
+      function setClosePremiumSpanContent(content) {
+        let closePremiumSpan = document.getElementById("closePremiumSpan");
+        closePremiumSpan.innerHTML = content;
+      }
+      setTimeout(setClosePremiumSpanContent, 2000, "5");
+      setTimeout(setClosePremiumSpanContent, 3000, "4");
+      setTimeout(setClosePremiumSpanContent, 4000, "3");
+      setTimeout(setClosePremiumSpanContent, 5000, "2");
+      setTimeout(setClosePremiumSpanContent, 6000, "1");
+      setTimeout(setClosePremiumSpanContent, 7000, "0");
+      setTimeout(setClosePremiumSpanContent, 8000, "&times;");
+    </script>
+    </div>
+    <h2 class="premium-page-header">Buy PaulHub Premium!</h2>
+    <br>
+    <p class="premium-checkmarks">
+      &#10003; Remove this Popup<br>
+      &#10003; Support PaulHub team<br><br>
+    </p>
+    <h2 class="premium-page-price">
+      Only <span class="cross">69€</span> 9.99€!
+    </h2>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <a class="buy-btn" href="https://example.com" target="_blank">Buy now</a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  const decodingHandler = (() => {
+    const element = document.createElement('div');
+    return text => ((element.innerHTML = text), element.textContent);
+  })();
+  function showPremiumPopup() {
+    let premiumPopup = document.getElementById("premiumPremiumPopup");
+    premiumPopup.style.display='block';
+  }
+  function hidePremiumPopup() {
+    let premiumPopup = document.getElementById("premiumPremiumPopup");
+    premiumPopup.style.display='none';
+  }
+  function hidePremiumPopupIfAllowed() {
+    let closePremiumSpan = document.getElementById("closePremiumSpan");
+    if (closePremiumSpan.innerHTML.includes(decodingHandler("&times;"))) {
+      hidePremiumPopup();
+    };
+  }
+</script>

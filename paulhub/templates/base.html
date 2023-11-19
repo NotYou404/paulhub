@@ -28,10 +28,13 @@
       {% include "premium/_premium_bar.html" %}
     </div>
     <script>
-      setTimeout(() => {
-        let popup = document.getElementById("premiumBar");
-        popup.classList.toggle("show");
-      }, 10000)
+      setTimeout(showPremiumBar, 10000)
+    </script>
+    <div>
+      {% include "premium/_premium_popup.html" %}
+    </div>
+    <script>
+      setTimeout(showPremiumPopup, 1000)
     </script>
     <br>
     {% block content %}

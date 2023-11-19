@@ -17,13 +17,13 @@
     </a>
 
     <style>
-        h1 {
+        h1.nav-header {
           text-align: center;
           text-size-adjust: auto;
           font-size: calc(42px + .5vw);
         }
     </style>
-      <h1>{{ header_text }}</h1>
+      <h1 class="nav-header">{{ header_text }}</h1>
 
     <style>
     /* The Modal (background) */
@@ -113,23 +113,6 @@
     li {
       margin: 15px;
     }
-
-    a:link {
-      color: rgb(200, 200, 200);
-      text-decoration: none;
-    }
-    a:visited {
-      color: rgb(200, 200, 200);
-      text-decoration: none;
-    }
-    a:hover {
-      color: rgb(210, 210, 210);
-      text-decoration: underline;
-    }
-    a:active {
-      color: rgb(190, 190, 190);
-      text-decoration: underline;
-    }
     </style>
       <button id="myBtn" style="background-color: #242424; border: 1px solid #000000; border-radius: 4px;">
           <img src="/static/menu.png" alt="Open Navigation Menu" width="40px" height="40px">
@@ -146,7 +129,7 @@
             <!--<h1>PaulHub</h1>-->
             <ul>
               {% for link in ["home", "about"] %}
-              <li><a href="{{ url_for(link) }}">{{ link|upper }}</a></li>
+              <li><a class="theme" href="{{ url_for(link) }}">{{ link|upper }}</a></li>
               {% endfor %}
             </ul>
           </div>

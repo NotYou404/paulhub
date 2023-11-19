@@ -11,3 +11,37 @@ header, footer {
 table {
   border: 1px solid rgb(16, 16, 16);
 }
+div.premiumDiv {
+  background-color: rgb(30, 30, 30);
+}
+a.theme:link {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+}
+a.theme:visited {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+}
+a.theme:hover {
+  color: rgb(210, 210, 210);
+  text-decoration: underline;
+}
+a.theme:active {
+  color: rgb(190, 190, 190);
+  text-decoration: underline;
+}
+a.buy-btn {
+  color: rgb(200, 200, 200)
+}
+a.buy-btn:link {
+  text-decoration: none;
+}
+a.buy-btn:visited {
+  text-decoration: none;
+}
+a.buy-btn:hover {
+  text-decoration: underline;
+}
+a.buy-btn:active {
+  text-decoration: underline;
+}
