@@ -14,7 +14,7 @@
   <script src="/static/cookie.js"></script>
 </head>
 
-<body>
+<body id="body">
   <style>
     div.content {
       width: 960px;
@@ -22,6 +22,7 @@
     }
   </style>
   <div class="content">
+    <div class="wrapper">
     <header>
       {% include "_navigation.html" %}
     </header>
@@ -46,9 +47,21 @@
       <h1>To my defense, I don't have unlimited time. Well, I do, but I'm lazy. WORK IN PROGRESSSS!</h1>
     {% endblock content %}
     <br><br><br>
+    <div class="push"></div>
+    </div>
     <footer>
       {% include "_footer.html" %}
     </footer>
+    <script>
+      if (document.body.scrollHeight >= window.innerHeight) {
+        if (!document.getElementById("doNotAddHeight")) {
+          document.body.style["padding-bottom"] = "180px";
+        }
+      }
+    </script>
+    <audio id="wantYouGonePlayer" autoplay>
+      <source src="/static/music/wantyougone.mp3"/>
+    </audio>
   </div>
 </body>
 </html>

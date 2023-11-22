@@ -27,7 +27,7 @@
                     "alt": "December preparations"
                 },
                 {
-                    "func": "about",
+                    "func": "december_preparations",
                     "text": "December preparations"
                 }
             ]
@@ -59,7 +59,7 @@
                     "alt": "October's true meaning"
                 },
                 {
-                    "func": "about",
+                    "func": "october_true_meaning",
                     "text": "October's true meaning"
                 }
             ]

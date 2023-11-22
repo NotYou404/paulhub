@@ -109,6 +109,15 @@ def men_friendly_month_challenges():
     )
 
 
+@app.route("/pages/december_preparations")
+def december_preparations():
+    context = {
+        "title": "December preparations",
+        "header_text": "December preparations",
+    }
+    return render_template("pages/december_preparations.html", **context)
+
+
 @app.route("/pages/january_true_meaning")
 def january_true_meaning():
     context = {

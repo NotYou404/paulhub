@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+  h1.nav-header {
+    font-size: calc(28px + .5vw);
+  }
+</style>
+<div class="solo-text">
+  <p>
+    You need to prepare an environment, preferable something dark and comfortable. Warm would also be appreciated.<br>
+    Next you need to prepare tools, you won't get through December without them.<br>
+    Finally, break into houses until you find ducks.<br><br><br>
+    Wanna find out more about the December? Read our awesome article about <a class="theme" href="{{ url_for('december_true_meaning') }}">December's true meaning</a>.
+  </p>
+</div>
+
+{% endblock content %}
