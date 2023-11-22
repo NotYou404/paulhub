@@ -39,7 +39,7 @@
                     "alt": "Men friendly month challenges"
                 },
                 {
-                    "func": "about",
+                    "func": "men_friendly_month_challenges",
                     "text": "Men friendly month challenges"
                 }
             ],
@@ -49,7 +49,7 @@
                     "alt": "Month happiness chart"
                 },
                 {
-                    "func": "about",
+                    "func": "month_happiness_chart",
                     "text": "Month happiness chart"
                 }
             ],

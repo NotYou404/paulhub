@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+  h1.nav-header {
+    font-size: calc(28px + .5vw);
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="chart"></canvas>
+<script>
+  let ctx = document.getElementById('chart').getContext('2d');
+  let chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [
+          "Jam January",
+          "Free food February",
+          "More manners March",
+          "Apple April",
+          "Milky May",
+          "Just June",
+          "Jerk July",
+          "Acknowledged August",
+          "Soda September",
+          "Onlyfans only October",
+          "No neckflip November",
+          "Ditch ducks December",
+        ],
+        datasets: [{
+            label: 'Month happiness',
+            data: [60, 78, 19, 16, 85, 90.5, 96, 42, 69, 94, 35, 99.9],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      scales: {
+          y: {
+              beginAtZero: true
+          }
+      },
+      animation: {
+          duration: 500
+      },
+      /*plugins: {
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              let percent = context.formattedValue;
+              let month = context.chart.data.labels[context.dataIndex];
+              let text = `${percent}`;
+              return text;
+            }
+          }
+        }
+      }*/
+    }
+  });
+</script>
+
+{% endblock %}

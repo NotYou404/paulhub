@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+  h1.nav-header {
+    font-size: calc(28px + .5vw);
+  }
+</style>
+<br>
+<div class="solo-text">
+  <p>
+    {% for month, string in (
+        ("january", "Jam January"),
+        ("february", "Free food February"),
+        ("march", "More manners March"),
+        ("april", "Apple April (healthy) 😋"),
+        ("may", "Milky May (haha!)"),
+        ("june", "Just June"),
+        ("july", "Jerk July"),
+        ("august", "Acknowledged August"),
+        ("september", "Soda September"),
+        ("october", "Onlyfans only October"),
+        ("november", "No Neckflip November"),
+        ("december", "Ditch ducks December"),
+    ) %}
+    <a class="theme" href="{{ url_for('%s_true_meaning' % month) }}">{{ string }}</a><br>
+    {% endfor %}
+  </p>
+</div>
+
+{% endblock content %}

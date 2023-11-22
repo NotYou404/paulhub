@@ -11,6 +11,7 @@
       font-family: Verdana, Helvetica, Arial;
     }
   </style>
+  <script src="/static/cookie.js"></script>
 </head>
 
 <body>
@@ -28,13 +29,17 @@
       {% include "premium/_premium_bar.html" %}
     </div>
     <script>
-      setTimeout(showPremiumBar, 10000)
+      if (!getCookie("stfu")) {
+        setTimeout(showPremiumBar, 10000)
+      }
     </script>
     <div>
       {% include "premium/_premium_popup.html" %}
     </div>
     <script>
-      setTimeout(showPremiumPopup, 1000)
+      if (!getCookie("stfu")) {
+        setTimeout(showPremiumPopup, 1000)
+      }
     </script>
     <br>
     {% block content %}

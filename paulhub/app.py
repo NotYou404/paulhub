@@ -89,6 +89,134 @@ def premium():
     return render_template("premium/premium.html", **context)
 
 
+@app.route("/pages/month_happiness_chart")
+def month_happiness_chart():
+    context = {
+        "title": "Month happiness chart",
+        "header_text": "Month happiness chart"
+    }
+    return render_template("pages/month_happiness_chart.html", **context)
+
+
+@app.route("/pages/men_friendly_month_challenges")
+def men_friendly_month_challenges():
+    context = {
+        "title": "Men friendly month challenges",
+        "header_text": "Men friendly month challenges",
+    }
+    return render_template(
+        "pages/men_friendly_month_challenges.html", **context
+    )
+
+
+@app.route("/pages/january_true_meaning")
+def january_true_meaning():
+    context = {
+        "title": "January's true meaning",
+        "header_text": "January's true meaning",
+    }
+    return render_template("pages/january_true_meaning.html", **context)
+
+
+@app.route("/pages/february_true_meaning")
+def february_true_meaning():
+    context = {
+        "title": "February's true meaning",
+        "header_text": "February's true meaning",
+    }
+    return render_template("pages/february_true_meaning.html", **context)
+
+
+@app.route("/pages/march_true_meaning")
+def march_true_meaning():
+    context = {
+        "title": "March's true meaning",
+        "header_text": "March's true meaning",
+    }
+    return render_template("pages/march_true_meaning.html", **context)
+
+
+@app.route("/pages/april_true_meaning")
+def april_true_meaning():
+    context = {
+        "title": "April's true meaning",
+        "header_text": "April's true meaning",
+    }
+    return render_template("pages/april_true_meaning.html", **context)
+
+
+@app.route("/pages/may_true_meaning")
+def may_true_meaning():
+    context = {
+        "title": "May's true meaning",
+        "header_text": "May's true meaning",
+    }
+    return render_template("pages/may_true_meaning.html", **context)
+
+
+@app.route("/pages/june_true_meaning")
+def june_true_meaning():
+    context = {
+        "title": "June's true meaning",
+        "header_text": "June's true meaning",
+    }
+    return render_template("pages/june_true_meaning.html", **context)
+
+
+@app.route("/pages/july_true_meaning")
+def july_true_meaning():
+    context = {
+        "title": "July's true meaning",
+        "header_text": "July's true meaning",
+    }
+    return render_template("pages/july_true_meaning.html", **context)
+
+
+@app.route("/pages/august_true_meaning")
+def august_true_meaning():
+    context = {
+        "title": "August's true meaning",
+        "header_text": "August's true meaning",
+    }
+    return render_template("pages/august_true_meaning.html", **context)
+
+
+@app.route("/pages/september_true_meaning")
+def september_true_meaning():
+    context = {
+        "title": "September's true meaning",
+        "header_text": "September's true meaning",
+    }
+    return render_template("pages/september_true_meaning.html", **context)
+
+
+@app.route("/pages/october_true_meaning")
+def october_true_meaning():
+    context = {
+        "title": "October's true meaning",
+        "header_text": "October's true meaning",
+    }
+    return render_template("pages/october_true_meaning.html", **context)
+
+
+@app.route("/pages/november_true_meaning")
+def november_true_meaning():
+    context = {
+        "title": "November's true meaning",
+        "header_text": "November's true meaning",
+    }
+    return render_template("pages/november_true_meaning.html", **context)
+
+
+@app.route("/pages/december_true_meaning")
+def december_true_meaning():
+    context = {
+        "title": "December's true meaning",
+        "header_text": "December's true meaning",
+    }
+    return render_template("pages/december_true_meaning.html", **context)
+
+
 @app.route("/redirects/anti_november_petition")
 def anti_november_petition():
     return redirect("https://www.change.org/antinovember")
