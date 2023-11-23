@@ -1,7 +1,8 @@
-from flask import Flask, redirect, render_template
-from pathlib import Path
 import json
 from datetime import datetime
+from pathlib import Path
+
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
@@ -26,11 +27,15 @@ def get_month_data(month: int) -> MonthDataType:
 
 @app.route("/")
 def home():
-    month = datetime.today().month
+    today_month = datetime.today().month
+    month = request.args.get("month", today_month, int)
+    if not (1 <= month <= 12):
+        month = today_month
+    month_data = get_month_data(month)
     context = {
         "title": "Home",
-        "header_text": "Happy October!",
-        "month_data": get_month_data(month),
+        "header_text": month_data["header_text"],
+        "month_data": month_data,
     }
     return render_template("home.html", **context)
 
@@ -140,7 +145,9 @@ def january_true_meaning():
         "title": "January's true meaning",
         "header_text": "January's true meaning",
     }
-    return render_template("pages/january_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/january_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/february_true_meaning")
@@ -149,7 +156,9 @@ def february_true_meaning():
         "title": "February's true meaning",
         "header_text": "February's true meaning",
     }
-    return render_template("pages/february_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/february_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/march_true_meaning")
@@ -158,7 +167,9 @@ def march_true_meaning():
         "title": "March's true meaning",
         "header_text": "March's true meaning",
     }
-    return render_template("pages/march_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/march_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/april_true_meaning")
@@ -167,7 +178,9 @@ def april_true_meaning():
         "title": "April's true meaning",
         "header_text": "April's true meaning",
     }
-    return render_template("pages/april_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/april_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/may_true_meaning")
@@ -176,7 +189,9 @@ def may_true_meaning():
         "title": "May's true meaning",
         "header_text": "May's true meaning",
     }
-    return render_template("pages/may_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/may_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/june_true_meaning")
@@ -185,7 +200,9 @@ def june_true_meaning():
         "title": "June's true meaning",
         "header_text": "June's true meaning",
     }
-    return render_template("pages/june_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/june_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/july_true_meaning")
@@ -194,7 +211,9 @@ def july_true_meaning():
         "title": "July's true meaning",
         "header_text": "July's true meaning",
     }
-    return render_template("pages/july_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/july_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/august_true_meaning")
@@ -203,7 +222,9 @@ def august_true_meaning():
         "title": "August's true meaning",
         "header_text": "August's true meaning",
     }
-    return render_template("pages/august_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/august_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/september_true_meaning")
@@ -212,7 +233,9 @@ def september_true_meaning():
         "title": "September's true meaning",
         "header_text": "September's true meaning",
     }
-    return render_template("pages/september_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/september_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/october_true_meaning")
@@ -221,7 +244,9 @@ def october_true_meaning():
         "title": "October's true meaning",
         "header_text": "October's true meaning",
     }
-    return render_template("pages/october_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/october_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/november_true_meaning")
@@ -230,7 +255,9 @@ def november_true_meaning():
         "title": "November's true meaning",
         "header_text": "November's true meaning",
     }
-    return render_template("pages/november_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/november_true_meaning.html", **context
+    )
 
 
 @app.route("/pages/december_true_meaning")
@@ -239,7 +266,133 @@ def december_true_meaning():
         "title": "December's true meaning",
         "header_text": "December's true meaning",
     }
-    return render_template("pages/december_true_meaning.html", **context)
+    return render_template(
+        "pages/true_meaning/december_true_meaning.html", **context
+    )
+
+
+@app.route("/pages/jam_of_jar_recipe")
+def jam_of_jar_recipe():
+    context = {
+        "title": "Jam of Jar recipe",
+        "header_text": "Jam of Jar recipe",
+    }
+    return render_template(
+        "pages/month_philosophy/jam_of_jar_recipe.html", **context
+    )
+
+
+@app.route("/pages/the_conspiracy_of_free_food")
+def the_conspiracy_of_free_food():
+    context = {
+        "title": "The conspiracy of free food",
+        "header_text": "The conspiracy of free food",
+    }
+    return render_template(
+        "pages/month_philosophy/the_conspiracy_of_free_food.html", **context
+    )
+
+
+@app.route("/pages/how_to_outplay_march")
+def how_to_outplay_march():
+    context = {
+        "title": "How to outplay March",
+        "header_text": "How to outplay March",
+    }
+    return render_template(
+        "pages/month_philosophy/how_to_outplay_march.html", **context
+    )
+
+
+@app.route("/pages/a_doctors_statement_on_apple_april")
+def a_doctors_statement_on_apple_april():
+    context = {
+        "title": "A doctor's statement on apple April",
+        "header_text": "A doctor's statement on apple April",
+    }
+    return render_template(
+        "pages/month_philosophy/a_doctors_statement_on_apple_april.html",
+        **context
+    )
+
+
+@app.route("/pages/vegan_milk")
+def vegan_milk():
+    context = {
+        "title": "Vegan milk",
+        "header_text": "Vegan milk",
+    }
+    return render_template(
+        "pages/month_philosophy/vegan_milk.html", **context
+    )
+
+
+@app.route("/pages/why_just_june")
+def why_just_june():
+    context = {
+        "title": "Why just June?",
+        "header_text": "Why just June?",
+    }
+    return render_template(
+        "pages/month_philosophy/why_just_june.html", **context
+    )
+
+
+@app.route("/pages/how_to_not_get_banned_on_every_discord_server")
+def how_to_not_get_banned_on_every_discord_server():
+    context = {
+        "title": "How to not get banned on every Discord server",
+        "header_text": "How to not get banned on every Discord server",
+    }
+    return render_template(
+        "pages/month_philosophy/how_to_not_get_banned_on_every_discord_server"
+        ".html",
+        **context
+    )
+
+
+@app.route("/pages/gdtjett_please_sum")
+def gdtjett_please_sum():
+    context = {
+        "title": '"GDT Jett, please sum..."',
+        "header_text": '"GDT Jett, please sum..."',
+    }
+    return render_template(
+        "pages/month_philosophy/gdtjett_please_sum.html", **context
+    )
+
+
+@app.route("/pages/how_to_get_free_money")
+def how_to_get_free_money():
+    context = {
+        "title": "How to get free money",
+        "header_text": "How to get free money",
+    }
+    return render_template(
+        "pages/month_philosophy/how_to_get_free_money.html", **context
+    )
+
+
+@app.route("/pages/why_onlyfans_is_so_popular")
+def why_onlyfans_is_so_popular():
+    context = {
+        "title": "Why Onlyfans is so popular",
+        "header_text": "Why Onlyfans is so popular",
+    }
+    return render_template(
+        "pages/month_philosophy/why_onlyfans_is_so_popular.html", **context
+    )
+
+
+@app.route("/pages/its_christmas_time")
+def its_christmas_time():
+    context = {
+        "title": "It's Christmas time",
+        "header_text": "It's Christmas time",
+    }
+    return render_template(
+        "pages/month_philosophy/its_christmas_time.html", **context
+    )
 
 
 @app.route("/redirects/anti_november_petition")

@@ -1,5 +1,996 @@
 {
+    "1": {
+        "header_text": "Happy January!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/jam.png",
+                    "alt": "Jam of jar recipe"
+                },
+                {
+                    "func": "jam_of_jar_recipe",
+                    "text": "Jam of jar recipe"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/snowflake.png",
+                    "alt": "January's true meaning"
+                },
+                {
+                    "func": "january_true_meaning",
+                    "text": "January's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "2": {
+        "header_text": "Happy February!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/illuminati.png",
+                    "alt": "The conspiracy of free food"
+                },
+                {
+                    "func": "the_conspiracy_of_free_food",
+                    "text": "The conspiracy of free food"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/pizza.png",
+                    "alt": "February's true meaning"
+                },
+                {
+                    "func": "february_true_meaning",
+                    "text": "February's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "3": {
+        "header_text": "Happy March!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/roblox.png",
+                    "alt": "How to outplay March"
+                },
+                {
+                    "func": "how_to_outplay_march",
+                    "text": "How to outplay March"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/crylaugh.png",
+                    "alt": "March's true meaning"
+                },
+                {
+                    "func": "march_true_meaning",
+                    "text": "March's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "4": {
+        "header_text": "Happy April!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/apple.png",
+                    "alt": "A doctor's statement on apple April"
+                },
+                {
+                    "func": "a_doctors_statement_on_apple_april",
+                    "text": "A doctor's statement on apple April"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/healthy_trust.png",
+                    "alt": "April's true meaning"
+                },
+                {
+                    "func": "april_true_meaning",
+                    "text": "April's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "5": {
+        "header_text": "Happy May!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/cow.png",
+                    "alt": "Vegan milk"
+                },
+                {
+                    "func": "vegan_milk",
+                    "text": "Vegan milk"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/milk.png",
+                    "alt": "May's true meaning"
+                },
+                {
+                    "func": "may_true_meaning",
+                    "text": "May's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "6": {
+        "header_text": "Happy June!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/john.png",
+                    "alt": "Why just June?"
+                },
+                {
+                    "func": "why_just_june",
+                    "text": "Why just June?"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/bob.png",
+                    "alt": "June's true meaning"
+                },
+                {
+                    "func": "june_true_meaning",
+                    "text": "June's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "7": {
+        "header_text": "Happy July!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/discat.png",
+                    "alt": "How to not get banned on every Discord server"
+                },
+                {
+                    "func": "how_to_not_get_banned_on_every_discord_server",
+                    "text": "How to not get banned on every Discord server"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/jerk.png",
+                    "alt": "July's true meaning"
+                },
+                {
+                    "func": "july_true_meaning",
+                    "text": "July's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "8": {
+        "header_text": "Happy August!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/chatgpt_weird.png",
+                    "alt": "\"GDT Jett, please sum...\""
+                },
+                {
+                    "func": "gdtjett_please_sum",
+                    "text": "\"GDT Jett, please sum...\""
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/cookies.png",
+                    "alt": "August's true meaning"
+                },
+                {
+                    "func": "august_true_meaning",
+                    "text": "August's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "9": {
+        "header_text": "Happy September!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/money.png",
+                    "alt": "How to get free money"
+                },
+                {
+                    "func": "how_to_get_free_money",
+                    "text": "How to get free money"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/apple.png",
+                    "alt": "September's true meaning"
+                },
+                {
+                    "func": "september_true_meaning",
+                    "text": "September's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "10": {
+        "header_text": "Happy October!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/bob.png",
+                    "alt": "Why Onlyfans is so popular"
+                },
+                {
+                    "func": "why_onlyfans_is_so_popular",
+                    "text": "Why Onlyfans is so popular"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "onlyfans_logo_inverted.png",
+                    "alt": "October's true meaning"
+                },
+                {
+                    "func": "october_true_meaning",
+                    "text": "October's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
     "11": {
+        "header_text": "Happy October!",
         "trending": [
             [
                 {
@@ -61,6 +1052,105 @@
                 {
                     "func": "october_true_meaning",
                     "text": "October's true meaning"
+                }
+            ]
+        ],
+        "recommendations": [
+            [
+                {
+                    "name": "youtube_logo_weird.png",
+                    "alt": "Best video of the year"
+                },
+                {
+                    "func": "about",
+                    "text": "Best video of the year"
+                }
+            ],
+            [
+                {
+                    "name": "x_logo.jpg",
+                    "alt": "Good Twitter accounts"
+                },
+                {
+                    "func": "about",
+                    "text": "Good Twitter accounts"
+                }
+            ],
+            [
+                {
+                    "name": "reddit_logo_thinking.png",
+                    "alt": "Good rule 34 Subreddits"
+                },
+                {
+                    "func": "about",
+                    "text": "Good rule 34 Subreddits"
+                }
+            ]
+        ]
+    },
+    "12": {
+        "header_text": "Happy December!",
+        "trending": [
+            [
+                {
+                    "name": "walnut_bowl_square.jpg",
+                    "alt": "Petition against the November"
+                },
+                {
+                    "open_in_new_tab": "https://www.change.org/antinovember",
+                    "text": "Petition against the November"
+                }
+            ],
+            [
+                {
+                    "name": "prof.jpg",
+                    "alt": "Personal stuff"
+                },
+                {
+                    "func": "personal_stuff",
+                    "text": "Personal stuff"
+                }
+            ],
+            [
+                {
+                    "name": "images/fsm.png",
+                    "alt": "It's Christmas time"
+                },
+                {
+                    "func": "its_christmas_time",
+                    "text": "It's Christmas time"
+                }
+            ]
+        ],
+        "latest": [
+            [
+                {
+                    "name": "no_no_nuts.png",
+                    "alt": "Men friendly month challenges"
+                },
+                {
+                    "func": "men_friendly_month_challenges",
+                    "text": "Men friendly month challenges"
+                }
+            ],
+            [
+                {
+                    "name": "dream.png",
+                    "alt": "Month happiness chart"
+                },
+                {
+                    "func": "month_happiness_chart",
+                    "text": "Month happiness chart"
+                }
+            ],
+            [
+                {
+                    "name": "images/ditch_duck.png",
+                    "alt": "December's true meaning"
+                },
+                {
+                    "func": "december_true_meaning",
+                    "text": "December's true meaning"
                 }
             ]
         ],
