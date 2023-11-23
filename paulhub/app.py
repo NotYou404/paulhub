@@ -35,6 +35,11 @@ def home():
     return render_template("home.html", **context)
 
 
+@app.route("/evaljs")
+def evaljs():
+    return render_template("evaljs.html")
+
+
 @app.route("/about")
 def about():
     context = {

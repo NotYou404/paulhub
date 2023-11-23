@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="/static/cookie.js"></script>
+<input id="code" placeholder="Input JavaScript code" style="width: 80%"/>
+<button onclick="evaljs()">Evaluate</button>
+<p>Last output: <span id="lastOutput"></span></p>
+<a href="/">Take me home</a>
+<script>
+  function evaljs() {
+    let codeInput = document.getElementById("code");
+    let lastOutput = document.getElementById("lastOutput");
+    let code = codeInput.value;
+    let output = eval(code);
+    lastOutput.innerHTML = output;
+  }
+</script>
+</body>
+</html>
