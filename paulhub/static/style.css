@@ -14,11 +14,20 @@ div.solo-text {
 }
 html { height: 100%; }
 body {
-    min-height: 98%;
-    position: relative;
+  min-height: 98%;
+  position: relative;
 }
 footer { 
-    position: absolute;
-    bottom: 0;
-    width: 960px;
+  position: absolute;
+  bottom: 0;
+  width: 960px;
+}
+p.note
+{
+     border-left: solid 4px #3498db;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 12px;
+     margin-left: 10%;
+     margin-right: 10%;
 }

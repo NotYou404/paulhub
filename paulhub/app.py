@@ -118,6 +118,17 @@ def december_preparations():
     return render_template("pages/december_preparations.html", **context)
 
 
+@app.route("/pages/opinion_why_communism_is_better_for_us")
+def why_communism_is_better_for_us():
+    context = {
+        "title": "Opinion: Why communism is better for us",
+        "header_text": "Opinion: Why communism is better for us",
+    }
+    return render_template(
+        "pages/opinion_why_communism_is_better_for_us.html", **context
+    )
+
+
 @app.route("/pages/january_true_meaning")
 def january_true_meaning():
     context = {
