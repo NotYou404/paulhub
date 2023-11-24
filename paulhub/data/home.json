@@ -1093,12 +1093,12 @@
         "trending": [
             [
                 {
-                    "name": "walnut_bowl_square.jpg",
-                    "alt": "Petition against the November"
+                    "name": "images/karlmarx.png",
+                    "alt": "Opinion: Why communism is better for us"
                 },
                 {
-                    "open_in_new_tab": "https://www.change.org/antinovember",
-                    "text": "Petition against the November"
+                    "func": "why_communism_is_better_for_us",
+                    "text": "Opinion: Why communism is better for us"
                 }
             ],
             [

@@ -120,10 +120,6 @@
 </div>
 </div>
 <script>
-  const decodingHandler = (() => {
-    const element = document.createElement('div');
-    return text => ((element.innerHTML = text), element.textContent);
-  })();
   function showPremiumPopup() {
     let premiumPopup = document.getElementById("premiumPremiumPopup");
     premiumPopup.style.display='block';

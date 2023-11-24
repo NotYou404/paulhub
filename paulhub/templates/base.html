@@ -11,7 +11,10 @@
       font-family: Verdana, Helvetica, Arial;
     }
   </style>
-  <script src="/static/cookie.js"></script>
+  <script src="/static/funcs.js"></script>
+  <script>
+    let hasPremium = getCookie("hasPremium") ? true : false
+  </script>
 </head>
 
 <body id="body">
@@ -28,18 +31,36 @@
     </header>
     <div>
       {% include "premium/_premium_bar.html" %}
+      {% include "premium/_premium_bar_replace.html" %}
     </div>
     <script>
       if (!getCookie("stfu")) {
-        setTimeout(showPremiumBar, 10000)
+        if (!hasPremium) {
+          setTimeout(showPremiumBar, 10000)
+        } else {
+          setTimeout(showPremiumBarReplace, 10000)
+        }
       }
     </script>
     <div>
       {% include "premium/_premium_popup.html" %}
+      {% include "premium/_premium_popup_replace.html" %}
     </div>
     <script>
       if (!getCookie("stfu")) {
-        setTimeout(showPremiumPopup, 1000)
+        if (!hasPremium) {
+          setTimeout(showPremiumPopup, 1000)
+        } else {
+          setTimeout(showPremiumPopupReplace, 1000)
+        }
+      }
+    </script>
+    <div>
+      {% include "premium/_rate_popup.html" %}
+    </div>
+    <script>
+      if (!getCookie("stfu")) {
+        setTimeout(showRateUsPopup, 60000)
       }
     </script>
     <br>

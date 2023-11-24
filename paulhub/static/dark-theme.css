@@ -45,3 +45,24 @@ a.buy-btn:hover {
 a.buy-btn:active {
   text-decoration: underline;
 }
+a.copy-link-btn {
+  color: rgb(200, 200, 200)
+}
+a.copy-link-btn:link {
+  text-decoration: none;
+}
+a.copy-link-btn:visited {
+  text-decoration: none;
+}
+a.copy-link-btn:hover {
+  text-decoration: underline;
+}
+a.copy-link-btn:active {
+  text-decoration: underline;
+}
+div.premium-replace-div {
+  background-color: rgb(30, 30, 30);
+}
+div.rate-us-div {
+  background-color: rgb(30, 30, 30);
+}
