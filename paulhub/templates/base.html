@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link href="/static/dark-theme.css" rel="stylesheet" id="dark-theme-link">
-  <link href="/static/style.css" rel="stylesheet" id="style-link">
+  <link href="/static/css/dark-theme.css" rel="stylesheet" id="dark-theme-link">
+  <link href="/static/css/style.css" rel="stylesheet" id="style-link">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <title>PaulHub - {% block title %}{{ title }}{% endblock title %}</title>
   <style>
@@ -11,7 +11,7 @@
       font-family: Verdana, Helvetica, Arial;
     }
   </style>
-  <script src="/static/funcs.js"></script>
+  <script src="/static/js/funcs.js"></script>
   <script>
     let hasPremium = getCookie("hasPremium") ? true : false
   </script>
@@ -29,6 +29,8 @@
     <header>
       {% include "_navigation.html" %}
     </header>
+
+    {% if not stfu %}
     <div>
       {% include "premium/_premium_bar.html" %}
       {% include "premium/_premium_bar_replace.html" %}
@@ -63,6 +65,8 @@
         setTimeout(showRateUsPopup, 60000)
       }
     </script>
+    {% endif %}
+
     <br>
     {% block content %}
       <h1>To my defense, I don't have unlimited time. Well, I do, but I'm lazy. WORK IN PROGRESSSS!</h1>
@@ -80,9 +84,11 @@
         }
       }
     </script>
+    {% if not no_music %}
     <audio id="wantYouGonePlayer" autoplay>
       <source src="/static/music/wantyougone.mp3"/>
     </audio>
+    {% endif %}
   </div>
 </body>
 </html>

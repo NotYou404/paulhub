@@ -40,6 +40,19 @@ def home():
     return render_template("home.html", **context)
 
 
+@app.route("/redirects/rr")
+def redirect_rr():
+    origin = request.args.get("origin", type=str)
+    context = {
+        "title": "Thank you!",
+        "header_text": "GOTCHU!",
+        "stfu": True,
+        "no_music": True,
+    }
+    print(origin)
+    return render_template("rr.html", **context)
+
+
 @app.route("/evaljs")
 def evaljs():
     return render_template("evaljs.html")
