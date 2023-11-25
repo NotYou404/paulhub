@@ -3,6 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 from flask import Flask, redirect, render_template, request
+from data.rr import increment_rickroll
 
 app = Flask(__name__)
 
@@ -49,7 +50,9 @@ def redirect_rr():
         "stfu": True,
         "no_music": True,
     }
-    print(origin)
+    increment_rickroll(origin)
+    if origin:
+        return redirect("/redirects/rr")
     return render_template("rr.html", **context)
 
 

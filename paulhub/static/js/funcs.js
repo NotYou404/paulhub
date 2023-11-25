@@ -40,7 +40,7 @@ const decodingHandler = (() => {
 })();
 
 function setHasPremium() {
-  return setCookie("hasPremium", "1");
+  return setCookie("hasPremium", "1"); // todo implement this everywhere
 }
 
 function clearHasPremium() {
