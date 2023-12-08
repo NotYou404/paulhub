@@ -57,7 +57,7 @@
   <div class="container flex-row-justified">
     {% for image, text in month_data.recommendations %}
     <div style="font-size: 26px", id="limit-284">
-      <a class="theme" href="{{ url_for(text.func) if 'func' in text else text.open_in_new_tab }}" target="{{ '_blank' if 'open_in_new_tab' in text else '' }}">
+      <a class="theme" href="{{ url_for('redirect_rr') }}?origin={{ text.func }}" target="_blank" onclick="stopWYG()">
         <img src="/static/{{ image.name }}" width="284" height="284" class="d-inline-block align-top" alt="{{ image.alt }}">
         {{ text.text }}
       </a>
