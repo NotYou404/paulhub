@@ -4,12 +4,12 @@
         "trending": [
             [
                 {
-                    "name": "images/walnut_bowl_square.jpg",
-                    "alt": "Petition against the November"
+                    "name": "images/karlmarx.png",
+                    "alt": "Manifest of the haunted spectre of communism pt. II"
                 },
                 {
-                    "open_in_new_tab": "https://www.change.org/antinovember",
-                    "text": "Petition against the November"
+                    "func": "mothsoc2",
+                    "text": "Manifest of the haunted spectre of communism pt. II"
                 }
             ],
             [
@@ -103,12 +103,12 @@
         "trending": [
             [
                 {
-                    "name": "images/walnut_bowl_square.jpg",
-                    "alt": "Petition against the November"
+                    "name": "images/karlmarx.png",
+                    "alt": "Manifest of the haunted spectre of communism pt. III"
                 },
                 {
-                    "open_in_new_tab": "https://www.change.org/antinovember",
-                    "text": "Petition against the November"
+                    "func": "mothsoc3",
+                    "text": "Manifest of the haunted spectre of communism pt. III"
                 }
             ],
             [
@@ -202,12 +202,12 @@
         "trending": [
             [
                 {
-                    "name": "images/walnut_bowl_square.jpg",
-                    "alt": "Petition against the November"
+                    "name": "images/karlmarx.png",
+                    "alt": "Manifest of the haunted spectre of communism pt. IV"
                 },
                 {
-                    "open_in_new_tab": "https://www.change.org/antinovember",
-                    "text": "Petition against the November"
+                    "func": "mothsoc4",
+                    "text": "Manifest of the haunted spectre of communism pt. IV"
                 }
             ],
             [
@@ -301,12 +301,12 @@
         "trending": [
             [
                 {
-                    "name": "images/walnut_bowl_square.jpg",
-                    "alt": "Petition against the November"
+                    "name": "images/karlmarx.png",
+                    "alt": "Manifest of the haunted spectre of communism pt. V"
                 },
                 {
-                    "open_in_new_tab": "https://www.change.org/antinovember",
-                    "text": "Petition against the November"
+                    "func": "mothsoc5",
+                    "text": "Manifest of the haunted spectre of communism pt. V"
                 }
             ],
             [
