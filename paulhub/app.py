@@ -2,8 +2,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from flask import Flask, redirect, render_template, request
 from data.rr import increment_rickroll
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
@@ -144,14 +144,64 @@ def december_preparations():
     return render_template("pages/december_preparations.html", **context)
 
 
-@app.route("/pages/opinion_why_communism_is_better_for_us")
-def why_communism_is_better_for_us():
+@app.route("/pages/mothsoc1")
+def mothsoc1():
     context = {
-        "title": "Opinion: Why communism is better for us",
-        "header_text": "Opinion: Why communism is better for us",
+        "title": "Manifest of the haunted spectre of communism (Jan. edition)",
+        "header_text": "Manifest of the haunted spectre of communism (Jan. "
+                       "edition)",
     }
     return render_template(
-        "pages/opinion_why_communism_is_better_for_us.html", **context
+        "pages/mothsoc1.html", **context
+    )
+
+
+@app.route("/pages/mothsoc2")
+def mothsoc2():
+    context = {
+        "title": "Manifest of the haunted spectre of communism (Feb. edition)",
+        "header_text": "Manifest of the haunted spectre of communism (Feb. "
+                       "edition)",
+    }
+    return render_template(
+        "pages/mothsoc2.html", **context
+    )
+
+
+@app.route("/pages/mothsoc3")
+def mothsoc3():
+    context = {
+        "title": "Manifest of the haunted spectre of communism (Mar. edition)",
+        "header_text": "Manifest of the haunted spectre of communism (Mar. "
+                       "edition)",
+        "en": request.args.get("en", 0, int)
+    }
+    return render_template(
+        "pages/mothsoc3.html", **context
+    )
+
+
+@app.route("/pages/mothsoc4")
+def mothsoc4():
+    context = {
+        "title": "Manifest of the haunted spectre of communism (Apr. edition)",
+        "header_text": "Manifest of the haunted spectre of communism (Apr. "
+                       "edition)",
+    }
+    return render_template(
+        "pages/mothsoc4.html", **context
+    )
+
+
+@app.route("/pages/mothsoc5")
+def mothsoc5():
+    context = {
+        "title": "Manifest of the haunted spectre of communism (May. edition)",
+        "header_text": "Manifest of the haunted spectre of communism (May. "
+                       "edition)",
+    }
+    return render_template(
+        "pages/mothsoc5.html", **context
     )
 
 
