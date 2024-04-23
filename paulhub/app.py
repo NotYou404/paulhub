@@ -205,6 +205,17 @@ def mothsoc5():
     )
 
 
+@app.route("/pages/how_to_furry")
+def how_to_furry():
+    context = {
+        "title": "How to Furry [Updated] [Real]",
+        "header_text": "How to Furry [Updated] [Real]",
+    }
+    return render_template(
+        "pages/how_to_furry.html", **context
+    )
+
+
 @app.route("/pages/january_true_meaning")
 def january_true_meaning():
     context = {
