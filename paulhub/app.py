@@ -38,6 +38,9 @@ def home():
         "header_text": month_data["header_text"],
         "month_data": month_data,
     }
+    if month == 6:
+        context["extra_stylesheets"] = ["/static/css/pride.css"]
+        context["logo_overwrite"] = "/static/images/furry_hub_transparent.png"
     return render_template("home.html", **context)
 
 

@@ -13,7 +13,7 @@
   <div class="container flex-row justify-horizontally">
 
     <a class="navbar-brand" href="/">
-      <img src="/static/images/paulhub_transparent.png" width="230" height="80" class="d-inline-block align-top" alt="PaulHub">
+      <img src="{{ '/static/images/paulhub_transparent.png' if not logo_overwrite else logo_overwrite }}" width="230" height="80" class="d-inline-block align-top" alt="PaulHub">
     </a>
 
     <style>

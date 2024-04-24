@@ -6,9 +6,12 @@
   <meta name="description" content="PaulHub - A site with many cool guides and articles about lots of weird stuff. Check it out!">
   <meta property="og:title" content="PaulHub">
   <meta property="og:description" content="A site with many cool guides and articles about lots of weird stuff. Check it out!">
-  <meta property="og:url" content="https://xxxxxxxx.xxxxx">
+  <meta property="og:url" content="http://paulhub.us.to">
   <link href="/static/css/dark-theme.css" rel="stylesheet" id="dark-theme-link">
   <link href="/static/css/style.css" rel="stylesheet" id="style-link">
+  {% for stylesheet in extra_stylesheets %}
+    <link href="{{ stylesheet }}" rel="stylesheet">
+  {% endfor %}
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <title>PaulHub - {% block title %}{{ title }}{% endblock title %}</title>
   <style>
