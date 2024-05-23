@@ -22,12 +22,15 @@ footer {
   bottom: 0;
   width: 960px;
 }
-p.note
-{
+p.note {
      border-left: solid 4px #3498db;
      line-height: 18px;
      overflow: hidden;
      padding: 12px;
      margin-left: 10%;
      margin-right: 10%;
+}
+div.centered {
+  display: flex;
+  justify-content: center;
 }

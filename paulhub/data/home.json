@@ -410,12 +410,12 @@
             ],
             [
                 {
-                    "name": "images/prof.jpg",
-                    "alt": "Personal stuff"
+                    "name": "images/rainbow_flag.png",
+                    "alt": "Are you gay? Test yourself!"
                 },
                 {
-                    "func": "personal_stuff",
-                    "text": "Personal stuff"
+                    "func": "gay_test",
+                    "text": "Are you gay? Test yourself!"
                 }
             ],
             [

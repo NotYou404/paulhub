@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script>
+    function startTest() {
+        takeTestBtn = document.getElementById("take-test-btn");
+        takeTestBtn.disabled = true;
+        introDiv = document.getElementById("intro-div");
+        introDiv.classList.toggle("fade");
+        setTimeout(startPrideAnimation, 2000);
+    }
+
+    function startPrideAnimation() {
+        introDiv = document.getElementById("intro-div");
+        introDiv.innerHTML = "UwU";
+        introDiv.style.display = "flex";
+        introDiv.style.alignItems = "center";
+        introDiv.style.justifyContent = "center";
+        introDiv.style.width = "85%";
+        introDiv.style.height = "500px";
+        introDiv.style.borderRadius = "50%";
+        introDiv.style.background = "linear-gradient(to right, rgb(237, 34, 36), rgb(243, 91, 34), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165), rgb(97, 55, 155), rgb(147, 40, 142))";
+        introDiv.classList.toggle("fade");
+        setTimeout(stopPrideAnimation, 1000);
+    }
+
+    function stopPrideAnimation() {
+        introDiv = document.getElementById("intro-div");
+        introDiv.classList.toggle("fade");
+    }
+</script>
+
+<style>
+  h1.nav-header {
+    font-size: calc(28px + .5vw);
+  }
+  button.take-test-button {
+    background-color: rgb(4, 170, 109);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 24px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  button.take-test-button:hover {
+    background-color: rgb(4, 130, 79);
+  }
+  #intro-div {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  #intro-div.fade {
+    opacity: 0;
+  }
+</style>
+<div id="intro-div" class="solo-text">
+  <p>
+    In thoughts of the upcoming pride month (are you excited already?) you surely asked yourself: &raquo;Am I gay?&laquo;
+    <br><br>
+    You might have heard things related to this about Ed Sheeran and Furrys, but don't worry! Those have nothing to do with sexual orientation.
+  </p>
+  <br><br><br><br><br><br>
+  <div class="centered">
+    <button id="take-test-btn" class="take-test-button" onclick="startTest()">Take the test!</button>
+  </div>
+</div>
+
+{% endblock content %}

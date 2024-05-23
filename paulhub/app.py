@@ -491,3 +491,14 @@ def its_christmas_time() -> str:
 @app.route("/redirects/anti_november_petition")
 def anti_november_petition() -> Union[str, Response]:
     return redirect("https://www.change.org/antinovember")
+
+
+@app.route("/pages/gay_test")
+def gay_test() -> str:
+    context = {
+        "title": "Are you gay? Test yourself!",
+        "header_text": "Are you gay? Test yourself!",
+    }
+    return render_template(
+        "pages/gay_test.html", **context
+    )
