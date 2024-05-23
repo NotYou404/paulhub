@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% set materials = [
+    "UHU Glue",
+    "Nokia Phone",
+    "Paul",
+    "Stone",
+    "My Bottle",
+    "P.E.K.K.A.",
+    "Bowler's Rock",
+    "Quitting League",
+    "Maths E1 Course",
+    "Python",
+    "Elias E.",
+    "Not to get cancer when using Java",
+    "Duolingo Chapter Review",
+    "Deltaworld",
+    "Heisting the ECB <sup>[<a href='/redirects/rr'>confirmation required</a>]</sup>",
+    "Rubbers",
+    "Black",
+    "Sun",
+    "Fair Capitalism",
+    "X",
+    "Ohio",
+    "Germanic Rap",
+    "Wood",
+    "Crack",
+    "Discord Guilds",
+    "My Stardew Valley Goat",
+    "Captain Krah",
+    "Pluto",
+    "Kuchen TV's right Hand",
+    "Me",
+    "Crack",
+    "Pills (random)",
+    "LoL All-Chat try not to get cancer challenges",
+    "Titanic",
+    "Squirrels",
+    "Russians playing CS",
+    "Element 108",
+    "Nikklas",
+    "Duolingo",
+    "Granite",
+    "Diorite",
+    "Andesite",
+    "Marmor",
+    "Kobalt",
+    "Iridium",
+    "Kobold",
+    "Triangles",
+    "Paper",
+    "Vietnam",
+    "Tables",
+    "Apex Legends",
+    "Stealing from Elias E.",
+    "Revolution",
+    "Stalin",
+    "Space",
+    "Ape",
+    "Hardness",
+    "Crack",
+    "Moon",
+    "Steel",
+    "Windows",
+    "Grass",
+    "Weed",
+    "Mushrooms",
+    "Techno Mechanicus",
+    "Dimitri Molotov",
+    "Cornelius",
+    "MDMA",
+    "Diamond",
+    "Aëron<li style='visibility: hidden;'></li>",
+    "Latin",
+] %}
+<style>
+  h1.nav-header {
+    font-size: calc(28px + .5vw);
+  }
+</style>
+<div class="solo-text">
+  <p>
+    The following is a list of the hardest materials that can be found on our planet. As you know from the
+    <a href="/pages/mothsoc1">Manifest of the haunted spectre of communism</a>, <b>you cannot trust scientists on this</b>.
+    <br><br><br>
+    <ol>
+        {% for i in materials %}
+            <li>{{ i|safe }}</li>
+        {% endfor %}
+    </ol>
+    <br><br><br>
+    You want to know how this list has been determined? We gave everything a score measured by a concept described in the following.
+    <br><br><br><br><br>
+    You have to get a material, punch it and use a color picker tool to see exactly how red it is. The higher the saturation, the harder
+    the material.
+    <br><br><br>
+    If you have any questions, contact us <a href="/contact">here</a>.
+  </p>
+</div>
+
+{% endblock content %}
