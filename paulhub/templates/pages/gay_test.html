@@ -3,31 +3,157 @@
 {% block content %}
 
 <script>
+    "use strict";
+    let attractionPeople;
+    let attractionSite;
+
     function startTest() {
-        takeTestBtn = document.getElementById("take-test-btn");
-        takeTestBtn.disabled = true;
-        introDiv = document.getElementById("intro-div");
-        introDiv.classList.toggle("fade");
-        setTimeout(startPrideAnimation, 2000);
+      let takeTestBtn = document.getElementById("take-test-btn");
+      takeTestBtn.disabled = true;
+      let introDiv = document.getElementById("intro-div");
+      introDiv.classList.toggle("fade");
+      setTimeout(startPrideAnimation, 2000);
     }
 
     function startPrideAnimation() {
-        introDiv = document.getElementById("intro-div");
-        introDiv.innerHTML = "UwU";
-        introDiv.style.display = "flex";
-        introDiv.style.alignItems = "center";
-        introDiv.style.justifyContent = "center";
-        introDiv.style.width = "85%";
-        introDiv.style.height = "500px";
-        introDiv.style.borderRadius = "50%";
-        introDiv.style.background = "linear-gradient(to right, rgb(237, 34, 36), rgb(243, 91, 34), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165), rgb(97, 55, 155), rgb(147, 40, 142))";
-        introDiv.classList.toggle("fade");
-        setTimeout(stopPrideAnimation, 1000);
+      let introDiv = document.getElementById("intro-div");
+      introDiv.innerHTML = "UwU";
+      introDiv.style.display = "flex";
+      introDiv.style.alignItems = "center";
+      introDiv.style.justifyContent = "center";
+      introDiv.style.width = "85%";
+      introDiv.style.height = "500px";
+      introDiv.style.borderRadius = "50%";
+      introDiv.style.background = "linear-gradient(to right, rgb(237, 34, 36), rgb(243, 91, 34), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165), rgb(97, 55, 155), rgb(147, 40, 142))";
+      introDiv.classList.toggle("fade");
+      setTimeout(stopPrideAnimation, 1000);
     }
 
     function stopPrideAnimation() {
-        introDiv = document.getElementById("intro-div");
-        introDiv.classList.toggle("fade");
+      let introDiv = document.getElementById("intro-div");
+      introDiv.classList.toggle("fade");
+      setTimeout(newQuestion, 1200, 0);
+    }
+
+    function newQuestion(id) {
+      let d = document.getElementById("intro-div");
+      d.style.justifyContent = "space-between";
+      d.style.background = null;
+      d.borderRadius = "0px";
+      if (id == 0) {
+        d.innerHTML = "How old are you? <input id='age' class='answer' placeholder='Enter your answer here'>";
+      } else if (id == 1) {
+        d.innerHTML = "What do you identify as? <div>{% for value in ('Man', 'Woman', 'Illuminati', 'Nothing', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
+      } else if (id == 2) {
+        d.innerHTML = "Who is your favorite artist? <div>{% for value in ('Ed Sheeran', 'Taylor Swift', 'ConcernedApe', 'Goethe', 'Nobody', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
+      } else if (id == 3) {
+        d.innerHTML = "What is your favorite genre? <div>{% for value in ('Germanic Rap', 'Pop', '8-Bit', 'Rock', 'Stardew Valley', 'None', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
+      } else if (id == 4) {
+        d.innerHTML = "From 1 to 10, how much do you like this website? <span style='margin-left: 20px;' id='site-attraction-display'></span><div style='width: 250px;'><input type='range' min='1' max='11' value='5' class='slider' id='site-attraction'></div>";
+        let slider = document.getElementById("site-attraction");
+        let siteAttractionDisplay = document.getElementById("site-attraction-display");
+        slider.oninput = function() {
+          if (this.value !== "11") {
+            siteAttractionDisplay.innerHTML = this.value;
+            attractionSite = this.value;
+          } else {
+            siteAttractionDisplay.innerHTML = "Yes"
+            attractionSite = "yes"
+          }
+        }
+        slider.oninput()
+      } else if (id == 5) {
+        d.innerHTML = "Do you feel attracted to people of the same sex? <div>{% for value in ('Yes', 'No', 'IDK') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='radio-{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
+        let b1 = document.getElementById("radio-yes");
+        let b2 = document.getElementById("radio-no");
+        let b3 = document.getElementById("radio-idk");
+        b1.oninput = function() {
+          attractionPeople = "yes";
+          b2.checked = false;
+          b3.checked = false;
+        }
+        b2.oninput = function() {
+          attractionPeople = "no";
+          b1.checked = false;
+          b3.checked = false;
+        }
+        b3.oninput = function() {
+          attractionPeople = "idk";
+          b1.checked = false;
+          b2.checked = false;
+        }
+      } else {
+        evaluateTest()
+      }
+      if (document.getElementById("continue-btn") !== null) {
+        document.getElementById("continue-btn").remove()
+      }
+
+      if (id !== 6) {
+        d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;' onclick='prepareNewQuestionIfPossible(${id+1})'>Continue</button>`);
+      } else {
+        d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;'><a href='{{ url_for('redirect_rr') }}?origin=gaytest'>Continue</a></button>`);
+      }
+      let continueBtn = document.getElementById("continue-btn");
+      continueBtn.disabled = true;
+      if (id !== 6) {
+        setTimeout(() => continueBtn.disabled = false, 3000);
+      } else {
+        setTimeout(() => continueBtn.disabled = false, 10000);
+      }
+      d.classList.toggle("fade");
+    }
+
+    function prepareNewQuestionIfPossible(id) {
+      if (id == 6) {
+        if (!attractionPeople) {
+          alert("Answer plz :(");
+          return;
+        }
+      }
+      prepareNewQuestion(id)
+    }
+
+    function prepareNewQuestion(id) {
+      document.getElementById('intro-div').classList.toggle('fade');
+      setTimeout(newQuestion, 1000, id)
+    }
+
+    function evaluateTest() {
+      let d = document.getElementById("intro-div");
+      d.classList.toggle("fade");
+      setTimeout(showCalcAnimation, 1000);
+    }
+
+    function showCalcAnimation() {
+      let d = document.getElementById("intro-div");
+      d.classList.toggle("fade");
+      d.innerHTML = "Your result is now being evaluated.";
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 1000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated.", 1500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 2000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 2500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated.", 3000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 3500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 4000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated.", 4500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 5000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 5500);
+      setTimeout(() => d.classList.toggle("fade"), 6000);
+      setTimeout(showResult, 7000);
+    }
+
+    function showResult() {
+      let d = document.getElementById("intro-div");
+      d.classList.toggle("fade");
+      if (attractionSite === "yes") {
+        d.innerHTML = "It doesn't matter nearly as much as your coolness 😎";
+      } else if (attractionPeople === "yes") {
+        d.innerHTML = "You are probably gay.";
+      } else {
+        d.innerHTML = "You might be gay."
+      }
     }
 </script>
 
@@ -35,6 +161,16 @@
   h1.nav-header {
     font-size: calc(28px + .5vw);
   }
+  .question {
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 16px 32px;
+  }
+  input.answer {
+    padding: 10px 10px;
+    width: 60%;
+  }
+
   button.take-test-button {
     background-color: rgb(4, 170, 109);
     border: none;
@@ -58,6 +194,45 @@
   }
   #intro-div.fade {
     opacity: 0;
+  }
+
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    width: 100%;
+    height: 25px;
+    background: rgb(211, 211, 211);
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 15px;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    border-radius: 15px;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
   }
 </style>
 <div id="intro-div" class="solo-text">
