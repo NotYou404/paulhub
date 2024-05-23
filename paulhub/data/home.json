@@ -14,12 +14,12 @@
             ],
             [
                 {
-                    "name": "images/prof.jpg",
-                    "alt": "Personal stuff"
+                    "name": "images/uhuglue.png",
+                    "alt": "The hardest materials on earth"
                 },
                 {
-                    "func": "personal_stuff",
-                    "text": "Personal stuff"
+                    "func": "hardest_materials_on_earth",
+                    "text": "The hardest materials on earth"
                 }
             ],
             [
