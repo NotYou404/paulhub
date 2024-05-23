@@ -89,17 +89,13 @@
         document.getElementById("continue-btn").remove()
       }
 
-      if (id !== 6) {
-        d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;' onclick='prepareNewQuestionIfPossible(${id+1})'>Continue</button>`);
-      } else {
-        d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;'><a href='{{ url_for('redirect_rr') }}?origin=gaytest'>Continue</a></button>`);
-      }
+      d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;' onclick='prepareNewQuestionIfPossible(${id+1})'>Continue</button>`);
       let continueBtn = document.getElementById("continue-btn");
       continueBtn.disabled = true;
       if (id !== 6) {
         setTimeout(() => continueBtn.disabled = false, 3000);
       } else {
-        setTimeout(() => continueBtn.disabled = false, 10000);
+        setTimeout(() => {continueBtn.disabled = false; continueBtn.innerHTML = "<a href='{{ url_for('redirect_rr') }}?origin=gaytest'>Continue</a>";}, 10000);
       }
       d.classList.toggle("fade");
     }
