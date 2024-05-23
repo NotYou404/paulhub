@@ -1,9 +1,11 @@
 import json
 from datetime import datetime
 from pathlib import Path
+from typing import Union
 
 from data.rr import increment_rickroll
 from flask import Flask, redirect, render_template, request
+from werkzeug import Response
 
 app = Flask(__name__)
 
@@ -23,11 +25,11 @@ def get_month_data(month: int) -> MonthDataType:
     """
     data_path = Path(__file__).parent / "data" / "home.json"
     with open(data_path, "r", encoding="utf-8") as fp:
-        return json.load(fp)[str(month)]
+        return json.load(fp)[str(month)]  # type: ignore
 
 
 @app.route("/")
-def home():
+def home() -> str:
     today_month = datetime.today().month
     month = request.args.get("month", today_month, int)
     if not (1 <= month <= 12):
@@ -45,7 +47,7 @@ def home():
 
 
 @app.route("/redirects/rr")
-def redirect_rr():
+def redirect_rr() -> Union[str, Response]:
     origin = request.args.get("origin", type=str)
     context = {
         "title": "Thank you!",
@@ -60,12 +62,12 @@ def redirect_rr():
 
 
 @app.route("/evaljs")
-def evaljs():
+def evaljs() -> str:
     return render_template("evaljs.html")
 
 
 @app.route("/about")
-def about():
+def about() -> str:
     context = {
         "title": "About",
         "header_text": "About",
@@ -74,7 +76,7 @@ def about():
 
 
 @app.route("/tos")
-def tos():
+def tos() -> str:
     context = {
         "title": "Terms of Service",
         "header_text": "Terms of Service",
@@ -83,7 +85,7 @@ def tos():
 
 
 @app.route("/pp")
-def pp():
+def pp() -> str:
     context = {
         "title": "Privacy Policy",
         "header_text": "Privacy Policy",
@@ -92,7 +94,7 @@ def pp():
 
 
 @app.route("/contact")
-def contact():
+def contact() -> str:
     context = {
         "title": "Contact",
         "header_text": "Contact us",
@@ -101,7 +103,7 @@ def contact():
 
 
 @app.route("/pages/personal_stuff")
-def personal_stuff():
+def personal_stuff() -> str:
     context = {
         "title": "Personal stuff",
         "header_text": "Personal stuff",
@@ -110,7 +112,7 @@ def personal_stuff():
 
 
 @app.route("/premium")
-def premium():
+def premium() -> str:
     context = {
         "title": "Buy PaulHub Premium",
         "header_text": "Buy Premium",
@@ -119,7 +121,7 @@ def premium():
 
 
 @app.route("/pages/month_happiness_chart")
-def month_happiness_chart():
+def month_happiness_chart() -> str:
     context = {
         "title": "Month happiness chart",
         "header_text": "Month happiness chart"
@@ -128,7 +130,7 @@ def month_happiness_chart():
 
 
 @app.route("/pages/men_friendly_month_challenges")
-def men_friendly_month_challenges():
+def men_friendly_month_challenges() -> str:
     context = {
         "title": "Men friendly month challenges",
         "header_text": "Men friendly month challenges",
@@ -139,7 +141,7 @@ def men_friendly_month_challenges():
 
 
 @app.route("/pages/december_preparations")
-def december_preparations():
+def december_preparations() -> str:
     context = {
         "title": "December preparations",
         "header_text": "December preparations",
@@ -148,7 +150,7 @@ def december_preparations():
 
 
 @app.route("/pages/mothsoc1")
-def mothsoc1():
+def mothsoc1() -> str:
     context = {
         "title": "Manifest of the haunted spectre of communism (Jan. edition)",
         "header_text": "Manifest of the haunted spectre of communism (Jan. "
@@ -160,7 +162,7 @@ def mothsoc1():
 
 
 @app.route("/pages/mothsoc2")
-def mothsoc2():
+def mothsoc2() -> str:
     context = {
         "title": "Manifest of the haunted spectre of communism (Feb. edition)",
         "header_text": "Manifest of the haunted spectre of communism (Feb. "
@@ -172,7 +174,7 @@ def mothsoc2():
 
 
 @app.route("/pages/mothsoc3")
-def mothsoc3():
+def mothsoc3() -> str:
     context = {
         "title": "Manifest of the haunted spectre of communism (Mar. edition)",
         "header_text": "Manifest of the haunted spectre of communism (Mar. "
@@ -185,7 +187,7 @@ def mothsoc3():
 
 
 @app.route("/pages/mothsoc4")
-def mothsoc4():
+def mothsoc4() -> str:
     context = {
         "title": "Manifest of the haunted spectre of communism (Apr. edition)",
         "header_text": "Manifest of the haunted spectre of communism (Apr. "
@@ -197,7 +199,7 @@ def mothsoc4():
 
 
 @app.route("/pages/mothsoc5")
-def mothsoc5():
+def mothsoc5() -> str:
     context = {
         "title": "Manifest of the haunted spectre of communism (May. edition)",
         "header_text": "Manifest of the haunted spectre of communism (May. "
@@ -209,7 +211,7 @@ def mothsoc5():
 
 
 @app.route("/pages/how_to_furry")
-def how_to_furry():
+def how_to_furry() -> str:
     context = {
         "title": "How to Furry [Updated] [Real]",
         "header_text": "How to Furry [Updated] [Real]",
@@ -219,8 +221,19 @@ def how_to_furry():
     )
 
 
+@app.route("/pages/hardest_materials_on_earth")
+def hardest_materials_on_earth() -> str:
+    context = {
+        "title": "The hardest materials on earth",
+        "header_text": "The hardest materials on earth",
+    }
+    return render_template(
+        "pages/hardest_materials_on_earth.html", **context
+    )
+
+
 @app.route("/pages/january_true_meaning")
-def january_true_meaning():
+def january_true_meaning() -> str:
     context = {
         "title": "January's true meaning",
         "header_text": "January's true meaning",
@@ -231,7 +244,7 @@ def january_true_meaning():
 
 
 @app.route("/pages/february_true_meaning")
-def february_true_meaning():
+def february_true_meaning() -> str:
     context = {
         "title": "February's true meaning",
         "header_text": "February's true meaning",
@@ -242,7 +255,7 @@ def february_true_meaning():
 
 
 @app.route("/pages/march_true_meaning")
-def march_true_meaning():
+def march_true_meaning() -> str:
     context = {
         "title": "March's true meaning",
         "header_text": "March's true meaning",
@@ -253,7 +266,7 @@ def march_true_meaning():
 
 
 @app.route("/pages/april_true_meaning")
-def april_true_meaning():
+def april_true_meaning() -> str:
     context = {
         "title": "April's true meaning",
         "header_text": "April's true meaning",
@@ -264,7 +277,7 @@ def april_true_meaning():
 
 
 @app.route("/pages/may_true_meaning")
-def may_true_meaning():
+def may_true_meaning() -> str:
     context = {
         "title": "May's true meaning",
         "header_text": "May's true meaning",
@@ -275,7 +288,7 @@ def may_true_meaning():
 
 
 @app.route("/pages/june_true_meaning")
-def june_true_meaning():
+def june_true_meaning() -> str:
     context = {
         "title": "June's true meaning",
         "header_text": "June's true meaning",
@@ -286,7 +299,7 @@ def june_true_meaning():
 
 
 @app.route("/pages/july_true_meaning")
-def july_true_meaning():
+def july_true_meaning() -> str:
     context = {
         "title": "July's true meaning",
         "header_text": "July's true meaning",
@@ -297,7 +310,7 @@ def july_true_meaning():
 
 
 @app.route("/pages/august_true_meaning")
-def august_true_meaning():
+def august_true_meaning() -> str:
     context = {
         "title": "August's true meaning",
         "header_text": "August's true meaning",
@@ -308,7 +321,7 @@ def august_true_meaning():
 
 
 @app.route("/pages/september_true_meaning")
-def september_true_meaning():
+def september_true_meaning() -> str:
     context = {
         "title": "September's true meaning",
         "header_text": "September's true meaning",
@@ -319,7 +332,7 @@ def september_true_meaning():
 
 
 @app.route("/pages/october_true_meaning")
-def october_true_meaning():
+def october_true_meaning() -> str:
     context = {
         "title": "October's true meaning",
         "header_text": "October's true meaning",
@@ -330,7 +343,7 @@ def october_true_meaning():
 
 
 @app.route("/pages/november_true_meaning")
-def november_true_meaning():
+def november_true_meaning() -> str:
     context = {
         "title": "November's true meaning",
         "header_text": "November's true meaning",
@@ -341,7 +354,7 @@ def november_true_meaning():
 
 
 @app.route("/pages/december_true_meaning")
-def december_true_meaning():
+def december_true_meaning() -> str:
     context = {
         "title": "December's true meaning",
         "header_text": "December's true meaning",
@@ -352,7 +365,7 @@ def december_true_meaning():
 
 
 @app.route("/pages/jam_of_jar_recipe")
-def jam_of_jar_recipe():
+def jam_of_jar_recipe() -> str:
     context = {
         "title": "Jam of Jar recipe",
         "header_text": "Jam of Jar recipe",
@@ -363,7 +376,7 @@ def jam_of_jar_recipe():
 
 
 @app.route("/pages/the_conspiracy_of_free_food")
-def the_conspiracy_of_free_food():
+def the_conspiracy_of_free_food() -> str:
     context = {
         "title": "The conspiracy of free food",
         "header_text": "The conspiracy of free food",
@@ -374,7 +387,7 @@ def the_conspiracy_of_free_food():
 
 
 @app.route("/pages/how_to_outplay_march")
-def how_to_outplay_march():
+def how_to_outplay_march() -> str:
     context = {
         "title": "How to outplay March",
         "header_text": "How to outplay March",
@@ -385,7 +398,7 @@ def how_to_outplay_march():
 
 
 @app.route("/pages/a_doctors_statement_on_apple_april")
-def a_doctors_statement_on_apple_april():
+def a_doctors_statement_on_apple_april() -> str:
     context = {
         "title": "A doctor's statement on apple April",
         "header_text": "A doctor's statement on apple April",
@@ -397,7 +410,7 @@ def a_doctors_statement_on_apple_april():
 
 
 @app.route("/pages/vegan_milk")
-def vegan_milk():
+def vegan_milk() -> str:
     context = {
         "title": "Vegan milk",
         "header_text": "Vegan milk",
@@ -408,7 +421,7 @@ def vegan_milk():
 
 
 @app.route("/pages/why_just_june")
-def why_just_june():
+def why_just_june() -> str:
     context = {
         "title": "Why just June?",
         "header_text": "Why just June?",
@@ -419,7 +432,7 @@ def why_just_june():
 
 
 @app.route("/pages/how_to_not_get_banned_on_every_discord_server")
-def how_to_not_get_banned_on_every_discord_server():
+def how_to_not_get_banned_on_every_discord_server() -> str:
     context = {
         "title": "How to not get banned on every Discord server",
         "header_text": "How to not get banned on every Discord server",
@@ -432,7 +445,7 @@ def how_to_not_get_banned_on_every_discord_server():
 
 
 @app.route("/pages/gdtjett_please_sum")
-def gdtjett_please_sum():
+def gdtjett_please_sum() -> str:
     context = {
         "title": '"GDT Jett, please sum..."',
         "header_text": '"GDT Jett, please sum..."',
@@ -443,7 +456,7 @@ def gdtjett_please_sum():
 
 
 @app.route("/pages/how_to_get_free_money")
-def how_to_get_free_money():
+def how_to_get_free_money() -> str:
     context = {
         "title": "How to get free money",
         "header_text": "How to get free money",
@@ -454,7 +467,7 @@ def how_to_get_free_money():
 
 
 @app.route("/pages/why_onlyfans_is_so_popular")
-def why_onlyfans_is_so_popular():
+def why_onlyfans_is_so_popular() -> str:
     context = {
         "title": "Why Onlyfans is so popular",
         "header_text": "Why Onlyfans is so popular",
@@ -465,7 +478,7 @@ def why_onlyfans_is_so_popular():
 
 
 @app.route("/pages/its_christmas_time")
-def its_christmas_time():
+def its_christmas_time() -> str:
     context = {
         "title": "It's Christmas time",
         "header_text": "It's Christmas time",
@@ -476,5 +489,5 @@ def its_christmas_time():
 
 
 @app.route("/redirects/anti_november_petition")
-def anti_november_petition():
+def anti_november_petition() -> Union[str, Response]:
     return redirect("https://www.change.org/antinovember")
