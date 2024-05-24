@@ -45,7 +45,7 @@
       } else if (id == 1) {
         d.innerHTML = "What do you identify as? <div>{% for value in ('Man', 'Woman', 'Illuminati', 'Nothing', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
       } else if (id == 2) {
-        d.innerHTML = "Who is your favorite artist? <div>{% for value in ('Ed Sheeran', 'Taylor Swift', 'ConcernedApe', 'Goethe', 'Nobody', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
+        d.innerHTML = "Who is your favorite artist? <div>{% for value in ('Ed Sheeran', 'Taylor Swift', 'Mark Forster', 'ConcernedApe', 'Goethe', 'Nobody', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
       } else if (id == 3) {
         d.innerHTML = "What is your favorite genre? <div>{% for value in ('Germanic Rap', 'Pop', '8-Bit', 'Rock', 'Stardew Valley', 'None', 'Other') %}<div style='display: inline-flex; white-space: nowrap;'><input style='margin-right: 8px;' type='radio' id='{{ value.lower() }}' class='answer' value='{{ value }}'><label for='{{ value.lower() }}'>{{ value }}</label></div><br>{% endfor %}</div>";
       } else if (id == 4) {
