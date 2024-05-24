@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script>
+    "use strict";
+    let voices;
+    let percent;
+    let incV;
+    let decV;
+    let incP;
+    let decP;
+
+    function startTest() {
+      let takeTestBtn = document.getElementById("take-test-btn");
+      takeTestBtn.disabled = true;
+      let introDiv = document.getElementById("intro-div");
+      introDiv.classList.toggle("fade");
+      setTimeout(startPrideAnimation, 2000);
+    }
+
+    function startPrideAnimation() {
+      let introDiv = document.getElementById("intro-div");
+      introDiv.innerHTML = "";
+      introDiv.style.display = "flex";
+      introDiv.style.alignItems = "center";
+      introDiv.style.justifyContent = "center";
+      introDiv.style.width = "85%";
+      introDiv.style.height = "500px";
+      introDiv.style.borderRadius = "50%";
+
+      let setDColor = function(v) {
+        introDiv.style.background = `rgb(${v}, ${v}, ${v})`;
+      }
+      let c = 20;
+      for (let i = 200; i<5000; i++) {
+        setTimeout(setDColor, i, c);
+        c += 20;
+        if (c > 180) {
+            c = 20;
+        }
+      }
+      for (let i = 1000; i<6000; i+=500) {
+        setTimeout(() => introDiv.classList.toggle("fade"), i);
+      }
+      introDiv.style.background = "rgb(20, 20, 20)";
+      introDiv.classList.toggle("fade");
+      setTimeout(stopPrideAnimation, 6000);
+    }
+
+    function stopPrideAnimation() {
+      let introDiv = document.getElementById("intro-div");
+      introDiv.classList.toggle("fade");
+      setTimeout(newQuestion, 1200, 0);
+    }
+
+    function newQuestion(id) {
+      let d = document.getElementById("intro-div");
+      d.style.justifyContent = "space-between";
+      d.style.background = null;
+      d.borderRadius = "0px";
+      if (id == 0) {
+        d.innerHTML = "How old are you? <input id='age' class='answer' placeholder='Enter your answer here'>";
+      } else if (id == 1) {
+        d.innerHTML = "Where do you live? <input id='house' class='answer' placeholder='Enter your answer here'>";
+      } else if (id == 2) {
+        d.innerHTML = "What's your salary? <input id='salary' class='answer' placeholder='Enter your answer here'>";
+      } else if (id == 3) {
+        d.innerHTML = "If you had lots of cash lying around, where would you hide it? <input id='hiding-spot' class='answer' placeholder='Enter your answer here'>";
+      } else if (id == 4) {
+        d.innerHTML = "Do you have lots of cash lying around? <div><label for='cash'>Choose an answer: </label><select name='cash' id='cash'><option value='yes'>Yes</option><option value='maybe'>Maybe</option></select></div>";
+      } else if (id == 5) {
+        d.innerHTML = "Are you deaf? <div><label for='deaf'>Choose an answer: </label><select name='deaf' id='deaf'><option value='yes'>Yes</option><option value='maybe'>Maybe</option></select></div>";
+      } else if (id == 6) {
+        voices = 0;
+        incV = function() {
+            let display = document.getElementById("voices-display");
+            display.innerHTML = Number(display.innerHTML) + 1;
+            voices = Number(display.innerHTML);
+        }
+        decV = function() {
+            let display = document.getElementById("voices-display");
+            display.innerHTML = display.innerHTML - 1;
+            voices = display.innerHTML;
+        }
+        d.innerHTML = "How many voices do you hear? <div><button class=take-test-button style='padding: 10px; margin: 10px' onclick='incV()'>+</button><span id='voices-display'>0</span><button class=take-test-button style='padding: 10px; margin: 10px; margin-left: 12px; margin-right: 12px;' onclick='decV()'>-</button></div>";
+      } else if (id == 7) {
+        percent = 0;
+        incP = function() {
+            let display = document.getElementById("percent-display");
+            percent += 1;
+            if (percent > 100) {
+                percent = 100;
+            }
+            display.innerHTML = `${percent}%`;
+        }
+        decP = function() {
+            let display = document.getElementById("percent-display");
+            percent -= 1;
+            if (percent < 0) {
+                percent = 0;
+            }
+            display.innerHTML = `${percent}%`;
+        }
+        d.innerHTML = "How much % of those can't be heard by others as well? <div><button class=take-test-button style='padding: 10px; margin: 10px' onclick='incP()'>+</button><span id='percent-display'>0%</span><button class=take-test-button style='padding: 10px; margin: 10px; margin-left: 12px; margin-right: 12px;' onclick='decP()'>-</button></div>";
+      } else if (id == 8) {
+        d.innerHTML = "Are you regularly listening to the Stardew Valley Official Soundtrack? <div><label for='stardew'>Choose an answer: </label><select name='stardew' id='stardew'><option value='yes'>Yes</option><option value='certainly'>Certainly!</option></select></div>";
+      } else {
+        evaluateTest()
+      }
+      if (document.getElementById("continue-btn") !== null) {
+        document.getElementById("continue-btn").remove()
+      }
+
+      d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;' onclick='prepareNewQuestion(${id+1})'>Continue</button>`);
+      let continueBtn = document.getElementById("continue-btn");
+      continueBtn.disabled = true;
+      alert(id);
+      if (id !== 9) {
+        setTimeout(() => continueBtn.disabled = false, 3000);
+      } else {
+        setTimeout(() => {continueBtn.disabled = false; continueBtn.innerHTML = "<a href='{{ url_for('redirect_rr') }}?origin=schizotest'>Continue</a>";}, 10000);
+      }
+      d.classList.toggle("fade");
+    }
+
+    function prepareNewQuestion(id) {
+      document.getElementById('intro-div').classList.toggle('fade');
+      setTimeout(newQuestion, 1000, id)
+    }
+
+    function evaluateTest() {
+      let d = document.getElementById("intro-div");
+      d.classList.toggle("fade");
+      setTimeout(showCalcAnimation, 1000);
+    }
+
+    function showCalcAnimation() {
+      let d = document.getElementById("intro-div");
+      d.classList.toggle("fade");
+      d.innerHTML = "Your result is now being evaluated.";
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 1000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated.", 1500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 2000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 2500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated.", 3000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 3500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 4000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated.", 4500);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated..", 5000);
+      setTimeout(() => d.innerHTML = "Your result is now being evaluated...", 5500);
+      setTimeout(() => d.classList.toggle("fade"), 6000);
+      setTimeout(showResult, 7000);
+    }
+
+    function showResult() {
+      let d = document.getElementById("intro-div");
+      d.classList.toggle("fade");
+      if (percent / 100 * voices - 1 > 0) {
+        d.innerHTML = "You are definitely schizophrenic.";
+      } else {
+        d.innerHTML = "You might be schizophrenic. Thanks for you data. We don't save it ☺";
+      }
+    }
+</script>
+
+<style>
+  h1.nav-header {
+    font-size: calc(26px + .5vw);
+  }
+  .question {
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 16px 32px;
+  }
+  input.answer {
+    padding: 10px 10px;
+    width: 60%;
+  }
+
+  button.take-test-button {
+    background-color: rgb(4, 170, 109);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 24px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  button.take-test-button:hover {
+    background-color: rgb(4, 130, 79);
+  }
+  #intro-div {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  #intro-div.fade {
+    opacity: 0;
+  }
+
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    width: 100%;
+    height: 25px;
+    background: rgb(211, 211, 211);
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 15px;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    border-radius: 15px;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+</style>
+<div id="intro-div" class="solo-text">
+  <p>
+    At some point in life you <i>surely</i> asked yourself at least multiple times: <i>&raquo;Am I schizophrenic?&laquo;</i>
+    <br><br>
+    That's a really good question! Some might say, this is related to things other than voices too, but voices are just so much better than everything else.
+    That being said, try our amazing test! If you want. It has been thoroughly tested by experts and is guaranteed to deliver a result.
+  </p>
+  <br><br><br><br><br><br>
+  <div class="centered">
+    <button id="take-test-btn" class="take-test-button" onclick="startTest()">Take the test!</button>
+  </div>
+</div>
+
+{% endblock content %}

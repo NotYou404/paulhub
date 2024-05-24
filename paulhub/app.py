@@ -502,3 +502,14 @@ def gay_test() -> str:
     return render_template(
         "pages/gay_test.html", **context
     )
+
+
+@app.route("/pages/schizo_test")
+def schizo_test() -> str:
+    context = {
+        "title": "Are you schizophrenic? Test yourself!",
+        "header_text": "Are you schizophrenic? Test yourself!",
+    }
+    return render_template(
+        "pages/schizo_test.html", **context
+    )
