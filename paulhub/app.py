@@ -513,3 +513,14 @@ def schizo_test() -> str:
     return render_template(
         "pages/schizo_test.html", **context
     )
+
+
+@app.route("/pages/book_review_jenna")
+def book_review_jenna() -> str:
+    context = {
+        "title": "Book review: The adoration of Jenna Fox",
+        "header_text": "Book review: The adoration of Jenna Fox",
+    }
+    return render_template(
+        "pages/book_review_jenna.html", **context
+    )

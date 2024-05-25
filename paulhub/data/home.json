@@ -212,12 +212,12 @@
             ],
             [
                 {
-                    "name": "images/prof.jpg",
-                    "alt": "Personal stuff"
+                    "name": "images/fox.png",
+                    "alt": "Book review: The adoration of Jenna Fox"
                 },
                 {
-                    "func": "personal_stuff",
-                    "text": "Personal stuff"
+                    "func": "book_review_jenna",
+                    "text": "Book review: The adoration of Jenna Fox"
                 }
             ],
             [
