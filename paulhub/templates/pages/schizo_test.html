@@ -102,7 +102,7 @@
             }
             display.innerHTML = `${percent}%`;
         }
-        d.innerHTML = "How much % of those can't be heard by others as well? <div><button class=take-test-button style='padding: 10px; margin: 10px' onclick='incP()'>+</button><span id='percent-display'>0%</span><button class=take-test-button style='padding: 10px; margin: 10px; margin-left: 12px; margin-right: 12px;' onclick='decP()'>-</button></div>";
+        d.innerHTML = "How much % of those can be heard by others as well? <div><button class=take-test-button style='padding: 10px; margin: 10px' onclick='incP()'>+</button><span id='percent-display'>0%</span><button class=take-test-button style='padding: 10px; margin: 10px; margin-left: 12px; margin-right: 12px;' onclick='decP()'>-</button></div>";
       } else if (id == 8) {
         d.innerHTML = "Are you regularly listening to the Stardew Valley Official Soundtrack? <div><label for='stardew'>Choose an answer: </label><select name='stardew' id='stardew'><option value='yes'>Yes</option><option value='certainly'>Certainly!</option></select></div>";
       } else {
@@ -156,7 +156,7 @@
     function showResult() {
       let d = document.getElementById("intro-div");
       d.classList.toggle("fade");
-      if (percent / 100 * voices - 1 > 0) {
+      if ((1 - percent / 100) * voices - 1 > 0) {
         d.innerHTML = "You are definitely schizophrenic.";
       } else {
         d.innerHTML = "You might be schizophrenic. Thanks for you data. We don't save it ☺";
