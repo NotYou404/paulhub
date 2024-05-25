@@ -707,12 +707,12 @@
             ],
             [
                 {
-                    "name": "images/prof.jpg",
-                    "alt": "Personal stuff"
+                    "name": "images/scream.png",
+                    "alt": "Are you schizophrenic? Test yourself!"
                 },
                 {
-                    "func": "personal_stuff",
-                    "text": "Personal stuff"
+                    "func": "schizo_test",
+                    "text": "Are you schizophrenic? Test yourself!"
                 }
             ],
             [

@@ -115,7 +115,6 @@
       d.insertAdjacentHTML("afterend", `<button id='continue-btn' class='take-test-button' style='position: absolute; right: 20px; bottom: 15%;' onclick='prepareNewQuestion(${id+1})'>Continue</button>`);
       let continueBtn = document.getElementById("continue-btn");
       continueBtn.disabled = true;
-      alert(id);
       if (id !== 9) {
         setTimeout(() => continueBtn.disabled = false, 3000);
       } else {
