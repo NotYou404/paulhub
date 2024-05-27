@@ -806,12 +806,12 @@
             ],
             [
                 {
-                    "name": "images/prof.jpg",
-                    "alt": "Personal stuff"
+                    "name": "images/google.png",
+                    "alt": "Things an average Google user once said"
                 },
                 {
-                    "func": "personal_stuff",
-                    "text": "Personal stuff"
+                    "func": "google_user_parody",
+                    "text": "Things an average Google user once said"
                 }
             ],
             [

@@ -524,3 +524,14 @@ def book_review_jenna() -> str:
     return render_template(
         "pages/book_review_jenna.html", **context
     )
+
+
+@app.route("/pages/google_user_parody")
+def google_user_parody() -> str:
+    context = {
+        "title": "Things an average Google user once said",
+        "header_text": "Things an average Google user once said",
+    }
+    return render_template(
+        "pages/google_user_parody.html", **context
+    )
