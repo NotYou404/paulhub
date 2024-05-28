@@ -3,10 +3,8 @@
 {% block content %}
 
 <style>
-  h1.nav-header {
-    font-size: calc(28px + .5vw);
-  }
-  .popup-div {
+
+  /*.popup-div {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -52,29 +50,188 @@
   @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+  }*/
+  /*.interview-name-img-box {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  .interview-img {
+    max-width: 60px;
+    width: 100%;
+    max-height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }*/
+  h1.nav-header {
+    font-size: calc(28px + .5vw);
+  }
+  div.quote-slider-container {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+  div.quote-name-original-container {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  div.globe-original-container {
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  .quote-box {
+    border: 2px solid rgb(20, 20, 20);
+    background-color: rgb(45, 45, 45);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+  }
+  .quote-box-name {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+  .quote-box-text {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .quote-show-original {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 5px;
   }
 </style>
 <script>
-    function togglePopup(id) {
-        var popup = document.getElementById(id);
+    /*function togglePopup(id) {
+        let popup = document.getElementById(id);
         popup.classList.toggle("show");
+    }*/
+    function originalQuote(id) {
+      let span = document.getElementById(`quote${id}`);
+      let div = document.getElementById(`div${id}`);
+      let show = document.getElementById(`show${id}`);
+      let m;
+      switch (id) {
+        case 0:
+        m = "&raquo;Damit wir lokal auf einem Server spielen können&laquo;";
+        break;
+        case 1:
+        m = "Me: &raquo;Nur wenn du dein Betriebssystem nicht modifiziert hast&laquo;<br>Aaron: &raquo;Hä? Selbst das IPhone 4 kann das&laquo;";
+        break;
+        case 2:
+        m = "&raquo;Jeder hat Microsoft Office&laquo;";
+        break;
+        case 3:
+        m = "&raquo;Tipp das doch einfach mal bei Google ein&laquo;";
+        break;
+        case 4:
+        m = "&raquo;Wie öffne ich diese ZIP Datei?&laquo;";
+        break;
+        case 5:
+        m = "&raquo;Was juckt mich Datenschutz?&laquo;";
+        break;
+        case 6:
+        m = "&raquo;Imagine man benutzt DuckDuckGo&laquo;";
+        break;
+        case 7:
+        m = "(Sebastian tries to paraphrase the word 'Browser')<br>&raquo;Google ist ein...?&laquo;";
+        break;
+        case 8:
+        m = "&raquo;Das stand bei Google&laquo;";
+        break;
+        case 9:
+        m = "&raquo;Was ist ein Kernel?&laquo;";
+        break;
+        case 10:
+        m = "&raquo;Da steht keine Quelle, das ist bei Google&laquo;";
+        break;
+        case 11:
+        m = "&raquo;Jesus ist ein Nuttensohn&laquo;";
+        break;
+      }
+      span.innerHTML = m
+      show.innerHTML = "Show translated"
+      div.setAttribute("onclick", `translatedQuote(${id})`)
+    }
+    function translatedQuote(id) {
+      let span = document.getElementById(`quote${id}`);
+      let div = document.getElementById(`div${id}`);
+      let show = document.getElementById(`show${id}`);
+      let m;
+      switch (id) {
+        case 0:
+        m = "&raquo;So we can play on one server locally&laquo;";
+        break;
+        case 1:
+        m = "Me: &raquo;Nur wenn du dein Betriebssystem nicht modifiziert hast&laquo;<br>Aaron: &raquo;Hä? Selbst das IPhone 4 kann das&laquo;";
+        break;
+        case 2:
+        m = "&raquo;Jeder hat Microsoft Office&laquo;";
+        break;
+        case 3:
+        m = "&raquo;Tipp das doch einfach mal bei Google ein&laquo;";
+        break;
+        case 4:
+        m = "&raquo;Wie öffne ich diese ZIP Datei?&laquo;";
+        break;
+        case 5:
+        m = "&raquo;Was juckt mich Datenschutz?&laquo;";
+        break;
+        case 6:
+        m = "&raquo;Imagine man benutzt DuckDuckGo&laquo;";
+        break;
+        case 7:
+        m = "(Sebastian tries to paraphrase the word 'Browser')<br>&raquo;Google ist ein...?&laquo;";
+        break;
+        case 8:
+        m = "&raquo;Das stand bei Google&laquo;";
+        break;
+        case 9:
+        m = "&raquo;Was ist ein Kernel?&laquo;";
+        break;
+        case 10:
+        m = "&raquo;Da steht keine Quelle, das ist bei Google&laquo;";
+        break;
+        case 11:
+        m = "&raquo;Jesus ist ein Nuttensohn&laquo;";
+        break;
+      }
+      span.innerHTML = m
+      show.innerHTML = "Show original"
+      div.setAttribute("onclick", `originalQuote(${id})`)
     }
 </script>
 
-<p class="note">
+<!--<p class="note">
   <strong>Note: </strong>Some of these things have been translated. Hover to reveal the original quote.
 </p>
-<br>
+<br>-->
 <p class="note">
-  <strong>Note: </strong>This list is getting updated regularly. Last update: 27 May 2024
+  <strong>Note: </strong>This list is getting updated regularly. Last update: 28 May 2024
 </p>
 <br>
 <p class="note">
   <strong>Note: </strong>There may be multiple people with the same name
 </p>
-<br>
-<div class="solo-text" style="white-space: nowrap;">
-  <p>
+<br><br><br>
+<div class="quote-slider-container">
+  <div class="quote-box">
+    <p id="quote0" class="quote-box-text">&raquo;So we can play on one server locally&laquo;</p>
+    <div class="quote-name-original-container">
+      <span class="quote-box-name">Sebastian, 15 January 2024</span>
+      <div id="div0" class="globe-original-container" onclick="originalQuote(0)">
+        <img src="/static/images/globe-icon.svg" width="22px" height="22px">
+        <span id="show0" class="quote-show-original">Show original</span>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--<p>
     <div class="popup-div" onmouseenter="togglePopup('popup0')" onmouseleave="togglePopup('popup0')">
         • &nbsp;&nbsp;<q>So we can play on one server locally</q>
         <span class="popuptext" id="popup0">Damit wir lokal auf einem Server spielen können</span>
@@ -145,8 +302,6 @@
         • &nbsp;&nbsp;<q>Jesus is the son of a mother who is selling her body</q>
         <span class="popuptext" id="popup11">Jesus ist ein Nuttensohn</span>
         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Paul, April 2024
-    </div>
-  </p>
-</div>
+    </div>-->
 
 {% endblock content %}
