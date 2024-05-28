@@ -3,66 +3,6 @@
 {% block content %}
 
 <style>
-
-  /*.popup-div {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  .popup-div .popuptext {
-    visibility: hidden;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  .popup-div .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .popup-div .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 0.6s;
-    animation: fadeIn 0.6s;
-  }
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }*/
-  /*.interview-name-img-box {
-    display: flex;
-    align-items: center;
-    margin: auto;
-  }
-  .interview-img {
-    max-width: 60px;
-    width: 100%;
-    max-height: 60px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }*/
   h1.nav-header {
     font-size: calc(28px + .5vw);
   }
@@ -107,56 +47,73 @@
   }
 </style>
 <script>
-    /*function togglePopup(id) {
-        let popup = document.getElementById(id);
-        popup.classList.toggle("show");
-    }*/
+    "use strict";
     function originalQuote(id) {
+      let container = document.getElementById(`container${id}`);
       let span = document.getElementById(`quote${id}`);
       let div = document.getElementById(`div${id}`);
       let show = document.getElementById(`show${id}`);
+      let name = document.getElementById(`name${id}`);
       let m;
+      let n;
       switch (id) {
         case 0:
         m = "&raquo;Damit wir lokal auf einem Server spielen können&laquo;";
+        n = "Sebastian, 15 January 2024";
         break;
         case 1:
         m = "Me: &raquo;Nur wenn du dein Betriebssystem nicht modifiziert hast&laquo;<br>Aaron: &raquo;Hä? Selbst das IPhone 4 kann das&laquo;";
+        n = "Aaron, 16 January 2024";
         break;
         case 2:
         m = "&raquo;Jeder hat Microsoft Office&laquo;";
+        n = "Elias, 9 January 2024";
         break;
         case 3:
         m = "&raquo;Tipp das doch einfach mal bei Google ein&laquo;";
+        n = "Carmen, 16 January 2024";
         break;
         case 4:
         m = "&raquo;Wie öffne ich diese ZIP Datei?&laquo;";
+        n = "Samuel, 13 January 2024";
         break;
         case 5:
         m = "&raquo;Was juckt mich Datenschutz?&laquo;";
+        n = "Elias somewhen in December 2023";
         break;
         case 6:
         m = "&raquo;Imagine man benutzt DuckDuckGo&laquo;";
+        n = "Daniel somewhen in November 2023";
         break;
         case 7:
         m = "(Sebastian tries to paraphrase the word 'Browser')<br>&raquo;Google ist ein...?&laquo;";
+        n = "Sebastian, 31 December 2023";
         break;
         case 8:
         m = "&raquo;Das stand bei Google&laquo;";
+        n = "Anton, 14 February 2024";
         break;
         case 9:
         m = "&raquo;Was ist ein Kernel?&laquo;";
+        n = "Sebastian, 29 April 2024";
         break;
         case 10:
         m = "&raquo;Da steht keine Quelle, das ist bei Google&laquo;";
+        n = "Sebastian, 2023";
         break;
         case 11:
         m = "&raquo;Jesus ist ein Nuttensohn&laquo;";
+        n = "Paul, April 2024";
         break;
       }
-      span.innerHTML = m
-      show.innerHTML = "Show translated"
-      div.setAttribute("onclick", `translatedQuote(${id})`)
+      if (id % 2 != 0) {
+        container.style.borderColor = "rgb(20, 20, 20)";
+        container.style.backgroundColor = "rgb(40, 40, 40)";
+      }
+      span.innerHTML = m;
+      show.innerHTML = "Show translated";
+      name.innerHTML = n;
+      div.setAttribute("onclick", `translatedQuote(${id})`);
     }
     function translatedQuote(id) {
       let span = document.getElementById(`quote${id}`);
@@ -168,37 +125,37 @@
         m = "&raquo;So we can play on one server locally&laquo;";
         break;
         case 1:
-        m = "Me: &raquo;Nur wenn du dein Betriebssystem nicht modifiziert hast&laquo;<br>Aaron: &raquo;Hä? Selbst das IPhone 4 kann das&laquo;";
+        m = "Me: &raquo;Only if you didn't modify your OS&laquo;<br>Aaron: &raquo;Huh? Even the IPhone 4 can do that&laquo;";
         break;
         case 2:
-        m = "&raquo;Jeder hat Microsoft Office&laquo;";
+        m = "&raquo;Everyone has Microsoft Office&laquo;";
         break;
         case 3:
-        m = "&raquo;Tipp das doch einfach mal bei Google ein&laquo;";
+        m = "&raquo;Just type that into Google&laquo;";
         break;
         case 4:
-        m = "&raquo;Wie öffne ich diese ZIP Datei?&laquo;";
+        m = "&raquo;How do I open this ZIP file?&laquo;";
         break;
         case 5:
-        m = "&raquo;Was juckt mich Datenschutz?&laquo;";
+        m = "&raquo;Why would I care about privacy?&laquo;";
         break;
         case 6:
-        m = "&raquo;Imagine man benutzt DuckDuckGo&laquo;";
+        m = "&raquo;Imagine using DuckDuckGo&laquo;";
         break;
         case 7:
-        m = "(Sebastian tries to paraphrase the word 'Browser')<br>&raquo;Google ist ein...?&laquo;";
+        m = "(Sebastian tries to paraphrase the word 'Browser')<br>&raquo;Google is a...?&laquo;";
         break;
         case 8:
-        m = "&raquo;Das stand bei Google&laquo;";
+        m = "&raquo;That was written on Google&laquo;";
         break;
         case 9:
-        m = "&raquo;Was ist ein Kernel?&laquo;";
+        m = "&raquo;What's a kernel?&laquo;";
         break;
         case 10:
-        m = "&raquo;Da steht keine Quelle, das ist bei Google&laquo;";
+        m = "&raquo;There is no source, this is at Google&laquo;";
         break;
         case 11:
-        m = "&raquo;Jesus ist ein Nuttensohn&laquo;";
+        m = "&raquo;Jesus is the son of a mother who is selling her body&laquo;";
         break;
       }
       span.innerHTML = m
@@ -207,10 +164,6 @@
     }
 </script>
 
-<!--<p class="note">
-  <strong>Note: </strong>Some of these things have been translated. Hover to reveal the original quote.
-</p>
-<br>-->
 <p class="note">
   <strong>Note: </strong>This list is getting updated regularly. Last update: 28 May 2024
 </p>
@@ -219,89 +172,20 @@
   <strong>Note: </strong>There may be multiple people with the same name
 </p>
 <br><br><br>
+{% for i in range(0, 12) %}
 <div class="quote-slider-container">
-  <div class="quote-box">
-    <p id="quote0" class="quote-box-text">&raquo;So we can play on one server locally&laquo;</p>
+  <div id="container{{ i }}" class="quote-box">
+    <p id="quote{{ i }}" class="quote-box-text"></p>
     <div class="quote-name-original-container">
-      <span class="quote-box-name">Sebastian, 15 January 2024</span>
-      <div id="div0" class="globe-original-container" onclick="originalQuote(0)">
+      <span id="name{{ i }}" class="quote-box-name"></span>
+      <div id="div{{ i }}" class="globe-original-container">
         <img src="/static/images/globe-icon.svg" width="22px" height="22px">
-        <span id="show0" class="quote-show-original">Show original</span>
+        <span id="show{{ i }}" class="quote-show-original"></span>
       </div>
     </div>
   </div>
-</div>
-  <!--<p>
-    <div class="popup-div" onmouseenter="togglePopup('popup0')" onmouseleave="togglePopup('popup0')">
-        • &nbsp;&nbsp;<q>So we can play on one server locally</q>
-        <span class="popuptext" id="popup0">Damit wir lokal auf einem Server spielen können</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Sebastian, 15 January 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup1')" onmouseleave="togglePopup('popup1')">
-        • &nbsp;&nbsp;Me: <q>Only if you didn't modify your OS</q><br>>&nbsp;&nbsp;Aaron: <q>Huh? Even the IPhone 4 can do that</q>
-        <span class="popuptext" id="popup1">Hä? Selbst das IPhone 4 kann das</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Aaron, 16 January 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup2')" onmouseleave="togglePopup('popup2')">
-        • &nbsp;&nbsp;<q>Everyone has Microsoft Office</q>
-        <span class="popuptext" id="popup2">Jeder hat Microsoft Office</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Elias, 9 January 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup3')" onmouseleave="togglePopup('popup3')">
-        • &nbsp;&nbsp;<q>Just type that into Google</q>
-        <span class="popuptext" id="popup3">Tipp das doch einfach mal bei Google ein</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Carmen, 16 January 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup4')" onmouseleave="togglePopup('popup4')">
-        • &nbsp;&nbsp;<q>How do I open this ZIP file?</q>
-        <span class="popuptext" id="popup4">Wie öffne ich diese ZIP Datei?</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Samuel, 13 January 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup5')" onmouseleave="togglePopup('popup5')">
-        • &nbsp;&nbsp;<q>Why would I care about privacy?</q>
-        <span class="popuptext" id="popup5">Was juckt mich Datenschutz?</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Elias somewhen in December 2023
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup6')" onmouseleave="togglePopup('popup6')">
-        • &nbsp;&nbsp;<q>Imagine using DuckDuckGo</q>
-        <span class="popuptext" id="popup6">Imagine man benutzt DuckDuckGo</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Daniel somewhen in November 2023
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup7')" onmouseleave="togglePopup('popup7')">
-        • &nbsp;&nbsp;(Sebastian tries to paraphrase the word &laquo;Browser&raquo;) &nbsp;&nbsp;&nbsp;<q>Google is a...?</q>
-        <span class="popuptext" id="popup7">Google ist ein...?</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Sebastian, 31 December 2023
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup8')" onmouseleave="togglePopup('popup8')">
-        • &nbsp;&nbsp;<q>It was written on Google</q>
-        <span class="popuptext" id="popup8">Das stand bei Google</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Anton, 14 February 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup9')" onmouseleave="togglePopup('popup9')">
-        • &nbsp;&nbsp;<q>What is a kernel?</q>
-        <span class="popuptext" id="popup9">Was ist ein Kernel?</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Sebastian, 29 April 2024
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup10')" onmouseleave="togglePopup('popup10')">
-        • &nbsp;&nbsp;<q>There is no source, this is at Google</q>
-        <span class="popuptext" id="popup10">Da steht keine Quelle, das ist bei Google</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Sebastian, 2023
-    </div>
-    <br><br><br>
-    <div class="popup-div" onmouseenter="togglePopup('popup11')" onmouseleave="togglePopup('popup11')">
-        • &nbsp;&nbsp;<q>Jesus is the son of a mother who is selling her body</q>
-        <span class="popuptext" id="popup11">Jesus ist ein Nuttensohn</span>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Paul, April 2024
-    </div>-->
+</div><br><br><br><br>
+<script>originalQuote({{ i }})</script>
+{% endfor %}
 
 {% endblock content %}
